@@ -16,10 +16,10 @@ export default function Header() {
       <div className="container-page flex items-center justify-between py-4">
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/logo.svg"
+            src="/images/logo.png"
             alt={siteInfo.name}
-            width={220}
-            height={59}
+            width={215}
+            height={57}
             priority
           />
         </Link>
@@ -30,7 +30,7 @@ export default function Header() {
               <div key={link.label} className="relative group">
                 <a
                   href={link.href}
-                  className="flex items-center gap-1 font-medium text-navy-dark hover:text-brand-blue transition-colors py-2"
+                  className="flex items-center gap-1 font-medium text-navy-dark hover:text-accent-dark transition-colors py-2"
                 >
                   {link.label} <ChevronDown size={14} />
                 </a>
@@ -39,7 +39,7 @@ export default function Header() {
                     <a
                       key={s.slug}
                       href="#services"
-                      className="block px-4 py-2 text-sm text-navy-dark hover:bg-light hover:text-brand-blue"
+                      className="block px-4 py-2 text-sm text-navy-dark hover:bg-light hover:text-accent-dark"
                     >
                       {s.title}
                     </a>
@@ -50,7 +50,7 @@ export default function Header() {
               <a
                 key={link.label}
                 href={link.href}
-                className="font-medium text-navy-dark hover:text-brand-blue transition-colors"
+                className="font-medium text-navy-dark hover:text-accent-dark transition-colors"
               >
                 {link.label}
               </a>
@@ -79,7 +79,7 @@ export default function Header() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="py-2 font-medium text-navy-dark hover:text-brand-blue"
+                className="py-2 font-medium text-navy-dark hover:text-accent-dark"
               >
                 {link.label}
               </a>

@@ -17,27 +17,21 @@ export default function Gallery() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {galleryItems.map((item) => (
-            <div key={item.title} className="rounded-2xl overflow-hidden shadow-sm border border-black/5">
+            <div
+              key={item.title}
+              className="rounded-2xl overflow-hidden shadow-sm border border-black/5"
+            >
               <div className="grid grid-cols-2 text-center bg-navy-dark text-white text-sm font-semibold">
                 <div className="py-2">Before</div>
                 <div className="py-2">After</div>
               </div>
-              <div className="grid grid-cols-2">
-                <Image
-                  src={item.before}
-                  alt={`${item.title} before`}
-                  width={704}
-                  height={384}
-                  className="w-full h-auto object-cover"
-                />
-                <Image
-                  src={item.after}
-                  alt={`${item.title} after`}
-                  width={704}
-                  height={384}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+              <Image
+                src={item.image}
+                alt={`${item.title} before and after`}
+                width={1408}
+                height={768}
+                className="w-full h-auto object-cover"
+              />
             </div>
           ))}
         </div>

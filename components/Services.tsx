@@ -40,7 +40,7 @@ export default function Services() {
                 <p className="text-slate-600 mb-4">{service.description}</p>
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-1 font-semibold text-brand-blue hover:text-navy-dark transition-colors"
+                  className="inline-flex items-center gap-1 font-semibold text-accent-dark hover:text-navy-dark transition-colors"
                 >
                   Read More <ArrowUpRight size={16} />
                 </a>

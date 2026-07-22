@@ -37,22 +37,24 @@ export default function Hero() {
         </div>
 
         <div className="relative flex justify-center lg:justify-end">
-          <div className="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-navy/10 to-brand-blue/10 -z-10" />
+          <div className="absolute inset-x-6 inset-y-4 rounded-[3rem] bg-gradient-to-br from-navy/10 via-accent/10 to-navy/5 -z-10" />
           <Image
-            src="/images/hero-cleaner.svg"
+            src="/images/hero-cleaner.png"
             alt="Professional cleaner at work"
             width={414}
             height={602}
-            className="rounded-3xl shadow-2xl w-[280px] sm:w-[340px] lg:w-[380px] h-auto"
+            className="drop-shadow-2xl w-[280px] sm:w-[340px] lg:w-[380px] h-auto"
             priority
           />
-          <Image
-            src="/images/hero-tools.svg"
-            alt="Cleaning tools"
-            width={284}
-            height={300}
-            className="hidden sm:block absolute -bottom-8 -left-6 rounded-2xl shadow-xl w-[180px] h-auto"
-          />
+          <div className="hidden sm:flex absolute -bottom-6 -left-6 items-center justify-center w-[170px] h-[170px] rounded-full bg-white shadow-xl p-4">
+            <Image
+              src="/images/hero-tools.png"
+              alt="Cleaning tools"
+              width={284}
+              height={300}
+              className="w-full h-full object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>

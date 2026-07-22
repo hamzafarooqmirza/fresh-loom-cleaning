@@ -20,37 +20,37 @@ export const services = [
     slug: "carpet-cleaning",
     title: "Carpet Cleaning",
     description: "Deep cleaning removes stains, dirt, and allergens for freshness.",
-    image: "/images/services/carpet-cleaning.svg",
+    image: "/images/services/carpet-cleaning.jpg",
   },
   {
     slug: "upholstery-cleaning",
     title: "Upholstery Cleaning",
     description: "Restore furniture freshness by removing stains, dust, and allergens.",
-    image: "/images/services/upholstery-cleaning.svg",
+    image: "/images/services/upholstery-cleaning.jpg",
   },
   {
     slug: "rug-cleaning",
     title: "Rug Cleaning",
     description: "Professional rug cleaning removes dirt, stains, and trapped allergens.",
-    image: "/images/services/rug-cleaning.svg",
+    image: "/images/services/rug-cleaning.jpg",
   },
   {
     slug: "sofa-cleaning",
     title: "Sofa Cleaning",
     description: "Deep sofa cleaning removes stains, dust, and unpleasant odours.",
-    image: "/images/services/sofa-cleaning.svg",
+    image: "/images/services/sofa-cleaning.jpg",
   },
   {
     slug: "stain-removal",
     title: "Stain Removal",
     description: "Effective stain treatment removes tough marks from all surfaces.",
-    image: "/images/services/stain-removal.svg",
+    image: "/images/services/stain-removal.jpg",
   },
   {
     slug: "odour-removal",
     title: "Odour Removal",
     description: "Eliminates bad smells caused by pets, smoke, and moisture for a fresher home.",
-    image: "/images/services/odour-removal.svg",
+    image: "/images/services/odour-removal.jpg",
   },
 ];
 
@@ -93,16 +93,10 @@ export const processSteps = [
 ];
 
 export const galleryItems = [
-  {
-    title: "Sofa Cleaning",
-    before: "/images/gallery/sofa-before.svg",
-    after: "/images/gallery/sofa-after.svg",
-  },
-  {
-    title: "Carpet Cleaning",
-    before: "/images/gallery/carpet-before.svg",
-    after: "/images/gallery/carpet-after.svg",
-  },
+  { title: "Sofa Cleaning", image: "/images/gallery/sofa-cleaning.png" },
+  { title: "Stain Removal", image: "/images/gallery/stain-removal.png" },
+  { title: "Rug Cleaning", image: "/images/gallery/rug-cleaning.png" },
+  { title: "Carpet Cleaning", image: "/images/gallery/carpet-cleaning.png" },
 ];
 
 export const testimonials = [

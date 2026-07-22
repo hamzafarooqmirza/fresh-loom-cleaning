@@ -7,10 +7,10 @@ export default function About() {
       <div className="container-page grid lg:grid-cols-2 gap-12 items-center">
         <div className="relative">
           <Image
-            src="/images/services/carpet-cleaning.svg"
+            src="/images/services/carpet-cleaning.jpg"
             alt="About Fresh Loom Cleaning"
-            width={800}
-            height={534}
+            width={1000}
+            height={667}
             className="rounded-3xl shadow-xl w-full h-auto"
           />
           <div className="absolute -bottom-6 -right-6 bg-navy-dark text-white rounded-2xl px-6 py-4 shadow-xl hidden sm:block">

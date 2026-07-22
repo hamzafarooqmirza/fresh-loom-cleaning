@@ -3,12 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --brand-navy: #13287e;
-  --brand-navy-dark: #0c1c5c;
-  --brand-blue: #2563eb;
-  --brand-accent: #f5a524;
-  --brand-accent-dark: #d98c0f;
-  --brand-light: #f4f7fb;
+  --brand-navy: #0b0f52;
+  --brand-navy-dark: #06082e;
+  --brand-accent: #fc5304;
+  --brand-accent-dark: #d94502;
+  --brand-light: #f6f6f2;
 }
 
 @theme inline {
@@ -16,7 +15,6 @@
   --color-foreground: var(--foreground);
   --color-navy: var(--brand-navy);
   --color-navy-dark: var(--brand-navy-dark);
-  --color-brand-blue: var(--brand-blue);
   --color-accent: var(--brand-accent);
   --color-accent-dark: var(--brand-accent-dark);
   --color-light: var(--brand-light);
