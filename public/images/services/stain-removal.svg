@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="548" viewBox="0 0 800 548">
+  <defs>
+    <linearGradient id="g25rkm9" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <pattern id="p25rkm9" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="28" height="28" fill="transparent"/>
+      <line x1="0" y1="0" x2="0" y2="28" stroke="rgba(255,255,255,0.08)" stroke-width="14"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="548" fill="url(#g25rkm9)"/>
+  <rect width="800" height="548" fill="url(#p25rkm9)"/>
+  <g fill="#ffffff" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="400" y="274" font-size="49.32" font-weight="700">Stain Removal</text>
+    
+  </g>
+</svg>

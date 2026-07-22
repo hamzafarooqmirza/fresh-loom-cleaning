@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="414" height="602" viewBox="0 0 414 602">
+  <defs>
+    <linearGradient id="gly4iaq" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+    <pattern id="ply4iaq" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="28" height="28" fill="transparent"/>
+      <line x1="0" y1="0" x2="0" y2="28" stroke="rgba(255,255,255,0.08)" stroke-width="14"/>
+    </pattern>
+  </defs>
+  <rect width="414" height="602" fill="url(#gly4iaq)"/>
+  <rect width="414" height="602" fill="url(#ply4iaq)"/>
+  <g fill="#ffffff" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="207" y="289" font-size="37.26" font-weight="700">Cleaning</text>
+    <text x="207" y="327" font-size="18.63" fill="rgba(255,255,255,0.85)">Expert</text>
+  </g>
+</svg>

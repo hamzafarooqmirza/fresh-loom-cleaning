@@ -1,0 +1,54 @@
+import Image from "next/image";
+import { ArrowUpRight, SprayCan } from "lucide-react";
+import { services } from "@/lib/data";
+
+export default function Services() {
+  return (
+    <section id="services" className="py-16 lg:py-24 bg-light">
+      <div className="container-page">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div>
+            <span className="eyebrow mb-4">
+              <SprayCan size={16} /> Our Services
+            </span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark">
+              The Services We Provide for Our Customers
+            </h2>
+          </div>
+          <a href="#contact" className="btn-outline shrink-0">
+            More Services <ArrowUpRight size={18} />
+          </a>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service) => (
+            <div
+              key={service.slug}
+              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow group"
+            >
+              <div className="overflow-hidden">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={800}
+                  height={534}
+                  className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-navy-dark mb-2">{service.title}</h3>
+                <p className="text-slate-600 mb-4">{service.description}</p>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-1 font-semibold text-brand-blue hover:text-navy-dark transition-colors"
+                >
+                  Read More <ArrowUpRight size={16} />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

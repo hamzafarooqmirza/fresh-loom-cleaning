@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="86" viewBox="0 0 320 86">
+  <defs>
+    <linearGradient id="g42hmx4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#13287e"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <pattern id="p42hmx4" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="28" height="28" fill="transparent"/>
+      <line x1="0" y1="0" x2="0" y2="28" stroke="rgba(255,255,255,0.08)" stroke-width="14"/>
+    </pattern>
+  </defs>
+  <rect width="320" height="86" fill="url(#g42hmx4)"/>
+  <rect width="320" height="86" fill="url(#p42hmx4)"/>
+  <g fill="#ffffff" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="160" y="31" font-size="16" font-weight="700">FRESH LOOM</text>
+    <text x="160" y="69" font-size="12" fill="rgba(255,255,255,0.85)">CARPET &amp; UPHOLSTERY CLEANING</text>
+  </g>
+</svg>
