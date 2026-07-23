@@ -1,11 +1,12 @@
 import { ArrowUpRight, SprayCan } from "lucide-react";
 import Image from "next/image";
+import Reveal from "./Reveal";
 
 export default function About() {
   return (
     <section id="about" className="py-16 lg:py-24">
       <div className="container-page grid lg:grid-cols-2 gap-12 items-center">
-        <div className="relative">
+        <Reveal direction="left" className="relative">
           <Image
             src="/images/services/carpet-cleaning.jpg"
             alt="About Fresh Loom Cleaning"
@@ -17,9 +18,9 @@ export default function About() {
             <div className="text-2xl font-extrabold">10+</div>
             <div className="text-sm text-white/80">Experience</div>
           </div>
-        </div>
+        </Reveal>
 
-        <div>
+        <Reveal direction="right" delay={0.1}>
           <span className="eyebrow mb-4">
             <SprayCan size={16} /> About us
           </span>
@@ -41,7 +42,7 @@ export default function About() {
           <a href="#contact" className="btn-accent">
             Read More <ArrowUpRight size={18} />
           </a>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

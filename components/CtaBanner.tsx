@@ -1,10 +1,11 @@
 import { ArrowUpRight } from "lucide-react";
 import { siteInfo } from "@/lib/data";
+import Reveal from "./Reveal";
 
 export default function CtaBanner() {
   return (
     <section className="py-16 bg-navy-dark">
-      <div className="container-page text-center max-w-2xl mx-auto">
+      <Reveal className="container-page text-center max-w-2xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
           Book Your Cleaning Today
         </h2>
@@ -16,7 +17,7 @@ export default function CtaBanner() {
         <a href={siteInfo.phoneHref} className="btn-accent">
           Call us <ArrowUpRight size={18} />
         </a>
-      </div>
+      </Reveal>
     </section>
   );
 }

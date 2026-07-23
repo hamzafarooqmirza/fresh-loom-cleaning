@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, ChevronDown, Search } from "lucide-react";
 import { navLinks, services, siteInfo } from "@/lib/data";
 import TopBar from "./TopBar";
@@ -78,27 +79,35 @@ export default function Header() {
         </button>
       </div>
 
-      {open && (
-        <div className="lg:hidden border-t border-black/5 bg-cream">
-          <nav className="container-page flex flex-col py-4 gap-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className={`py-2 font-heading font-semibold text-sm uppercase tracking-wide ${
-                  link.label === "Home" ? "text-accent" : "text-navy-dark hover:text-accent"
-                }`}
-              >
-                {link.label}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="lg:hidden border-t border-black/5 bg-cream overflow-hidden"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+          >
+            <nav className="container-page flex flex-col py-4 gap-1">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className={`py-2 font-heading font-semibold text-sm uppercase tracking-wide ${
+                    link.label === "Home" ? "text-accent" : "text-navy-dark hover:text-accent"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ))}
+              <a href="#contact" onClick={() => setOpen(false)} className="btn-navy mt-2 justify-center">
+                Get a Quote
               </a>
-            ))}
-            <a href="#contact" onClick={() => setOpen(false)} className="btn-navy mt-2 justify-center">
-              Get a Quote
-            </a>
-          </nav>
-        </div>
-      )}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
