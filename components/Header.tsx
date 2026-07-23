@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Search } from "lucide-react";
 import { navLinks, services, siteInfo } from "@/lib/data";
 import TopBar from "./TopBar";
 
@@ -11,7 +11,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 bg-cream shadow-sm">
       <TopBar />
       <div className="container-page flex items-center justify-between py-4">
         <Link href="/" className="flex items-center">
@@ -30,7 +30,7 @@ export default function Header() {
               <div key={link.label} className="relative group">
                 <a
                   href={link.href}
-                  className="flex items-center gap-1 font-medium text-navy-dark hover:text-accent-dark transition-colors py-2"
+                  className="flex items-center gap-1 font-heading font-semibold text-sm uppercase tracking-wide text-navy-dark hover:text-accent transition-colors py-2"
                 >
                   {link.label} <ChevronDown size={14} />
                 </a>
@@ -39,7 +39,7 @@ export default function Header() {
                     <a
                       key={s.slug}
                       href="#services"
-                      className="block px-4 py-2 text-sm text-navy-dark hover:bg-light hover:text-accent-dark"
+                      className="block px-4 py-2 text-sm text-navy-dark hover:bg-light hover:text-accent"
                     >
                       {s.title}
                     </a>
@@ -50,7 +50,9 @@ export default function Header() {
               <a
                 key={link.label}
                 href={link.href}
-                className="font-medium text-navy-dark hover:text-accent-dark transition-colors"
+                className={`font-heading font-semibold text-sm uppercase tracking-wide transition-colors ${
+                  link.label === "Home" ? "text-accent" : "text-navy-dark hover:text-accent"
+                }`}
               >
                 {link.label}
               </a>
@@ -58,9 +60,14 @@ export default function Header() {
           )}
         </nav>
 
-        <a href="#contact" className="hidden lg:inline-flex btn-accent">
-          Get a Quote
-        </a>
+        <div className="hidden lg:flex items-center gap-6">
+          <button aria-label="Search" className="text-navy hover:text-accent transition-colors">
+            <Search size={20} />
+          </button>
+          <a href="#contact" className="btn-navy">
+            Get a Quote
+          </a>
+        </div>
 
         <button
           aria-label="Toggle menu"
@@ -72,19 +79,21 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-black/5 bg-white">
+        <div className="lg:hidden border-t border-black/5 bg-cream">
           <nav className="container-page flex flex-col py-4 gap-1">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="py-2 font-medium text-navy-dark hover:text-accent-dark"
+                className={`py-2 font-heading font-semibold text-sm uppercase tracking-wide ${
+                  link.label === "Home" ? "text-accent" : "text-navy-dark hover:text-accent"
+                }`}
               >
                 {link.label}
               </a>
             ))}
-            <a href="#contact" onClick={() => setOpen(false)} className="btn-accent mt-2 justify-center">
+            <a href="#contact" onClick={() => setOpen(false)} className="btn-navy mt-2 justify-center">
               Get a Quote
             </a>
           </nav>

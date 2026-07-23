@@ -40,9 +40,9 @@ export default function TopBar() {
                 <a
                   href={s.href}
                   aria-label={s.label}
-                  className="w-7 h-7 flex items-center justify-center rounded-full bg-white/10 hover:bg-accent hover:text-navy-dark transition-colors"
+                  className="w-8 h-8 flex items-center justify-center rounded-full bg-white text-accent hover:bg-accent hover:text-white transition-colors"
                 >
-                  <Icon size={13} />
+                  <Icon size={14} />
                 </a>
               </li>
             );
