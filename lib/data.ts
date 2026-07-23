@@ -8,11 +8,37 @@ export const siteInfo = {
   hours: ["Mon-Fri: 24hrs", "Sunday: Closed"],
 };
 
+export const aboutPage = {
+  intro: [
+    "Freshloom Carpet & Upholstery Cleaning Limited provides professional cleaning services designed to restore cleanliness, freshness, and comfort to homes and businesses. Our experienced team uses advanced equipment and proven techniques to remove dirt, stains, allergens, and unwanted odors from carpets and furniture.",
+    "We are committed to delivering reliable service, exceptional results, and complete customer satisfaction. With careful attention to detail and safe cleaning methods, we help extend the life of your carpets, rugs, sofas, and upholstery while creating a healthier indoor environment.",
+  ],
+  vision: {
+    title: "Our Vision",
+    description:
+      "To become the UK's most trusted cleaning company, delivering exceptional carpet and upholstery care with lasting customer satisfaction.",
+  },
+  mission: {
+    title: "Our Mission",
+    description:
+      "To provide reliable, affordable cleaning services using safe methods and modern equipment, ensuring healthier and cleaner living environments.",
+  },
+  ukServices: {
+    title: "Carpet & Upholstery Cleaning Services In UK",
+    paragraphs: [
+      "Freshloom Carpet & Upholstery Cleaning Limited provides expert cleaning services across the UK, specializing in carpets, sofas, rugs, and upholstery. Our professional team uses advanced cleaning equipment and eco-friendly methods to remove deep stains, dirt, allergens, and unpleasant odors, ensuring a healthier and fresher living or working environment.",
+      "We are committed to delivering high-quality results with attention to detail and customer satisfaction at the core of our service. Whether you need residential or commercial cleaning, our reliable solutions restore the original beauty of your carpets and furniture while extending their lifespan. Contact Freshloom Cleaning Services today for trusted, affordable, and professional cleaning across the UK.",
+    ],
+  },
+  mapEmbedUrl:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4476.981500466958!2d-4.230314718005873!3d55.87150142346282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48884531d6da7d63%3A0x69cc73504a94c2b4!2sFRESHLOOM%20CARPET%20%26%20UPHOLSTERY%20CLEANING%20LIMI!5e0!3m2!1sen!2s!4v1782135488420!5m2!1sen!2s",
+};
+
 export const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Services", href: "/#services" },
+  { label: "Contact Us", href: "/#contact" },
 ];
 
 export const services = [

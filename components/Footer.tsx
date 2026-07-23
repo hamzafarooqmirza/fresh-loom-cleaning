@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { footerServiceLinks, navLinks, siteInfo } from "@/lib/data";
 import { FacebookIcon, InstagramIcon, LinkedInIcon, YouTubeIcon } from "./SocialIcons";
@@ -42,9 +43,9 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {navLinks.map((l) => (
               <li key={l.label}>
-                <a href={l.href} className="hover:text-accent transition-colors">
+                <Link href={l.href} className="hover:text-accent transition-colors">
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -55,9 +56,9 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {footerServiceLinks.map((s) => (
               <li key={s}>
-                <a href="#services" className="hover:text-accent transition-colors">
+                <Link href="/#services" className="hover:text-accent transition-colors">
                   {s}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

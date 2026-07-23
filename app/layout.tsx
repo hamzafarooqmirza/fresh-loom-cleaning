@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Quicksand, Open_Sans } from "next/font/google";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
 
 const quicksand = Quicksand({
@@ -29,7 +32,12 @@ export default function RootLayout({
       lang="en"
       className={`${quicksand.variable} ${openSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-body">{children}</body>
+      <body className="min-h-full flex flex-col font-body">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, ChevronDown, Search } from "lucide-react";
 import { navLinks, services, siteInfo } from "@/lib/data";
@@ -10,6 +11,12 @@ import TopBar from "./TopBar";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  function isActive(href: string) {
+    if (href === "/") return pathname === "/";
+    return href.startsWith("/") && !href.includes("#") && pathname === href;
+  }
 
   return (
     <header className="sticky top-0 z-50 bg-cream shadow-sm">
@@ -29,34 +36,34 @@ export default function Header() {
           {navLinks.map((link) =>
             link.label === "Services" ? (
               <div key={link.label} className="relative group">
-                <a
+                <Link
                   href={link.href}
                   className="flex items-center gap-1 font-heading font-semibold text-sm uppercase tracking-wide text-navy-dark hover:text-accent transition-colors py-2"
                 >
                   {link.label} <ChevronDown size={14} />
-                </a>
+                </Link>
                 <div className="absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-lg py-2 min-w-[220px] border border-black/5">
                   {services.map((s) => (
-                    <a
+                    <Link
                       key={s.slug}
-                      href="#services"
+                      href="/#services"
                       className="block px-4 py-2 text-sm text-navy-dark hover:bg-light hover:text-accent"
                     >
                       {s.title}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
             ) : (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className={`font-heading font-semibold text-sm uppercase tracking-wide transition-colors ${
-                  link.label === "Home" ? "text-accent" : "text-navy-dark hover:text-accent"
+                  isActive(link.href) ? "text-accent" : "text-navy-dark hover:text-accent"
                 }`}
               >
                 {link.label}
-              </a>
+              </Link>
             )
           )}
         </nav>
@@ -65,9 +72,9 @@ export default function Header() {
           <button aria-label="Search" className="text-navy hover:text-accent transition-colors">
             <Search size={20} />
           </button>
-          <a href="#contact" className="btn-navy">
+          <Link href="/#contact" className="btn-navy">
             Get a Quote
-          </a>
+          </Link>
         </div>
 
         <button
@@ -90,20 +97,20 @@ export default function Header() {
           >
             <nav className="container-page flex flex-col py-4 gap-1">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   onClick={() => setOpen(false)}
                   className={`py-2 font-heading font-semibold text-sm uppercase tracking-wide ${
-                    link.label === "Home" ? "text-accent" : "text-navy-dark hover:text-accent"
+                    isActive(link.href) ? "text-accent" : "text-navy-dark hover:text-accent"
                   }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
-              <a href="#contact" onClick={() => setOpen(false)} className="btn-navy mt-2 justify-center">
+              <Link href="/#contact" onClick={() => setOpen(false)} className="btn-navy mt-2 justify-center">
                 Get a Quote
-              </a>
+              </Link>
             </nav>
           </motion.div>
         )}
