@@ -47,7 +47,7 @@ export default function Services() {
                   <h3 className="text-xl font-bold text-navy-dark mb-2">{service.title}</h3>
                   <p className="text-slate-600 mb-4">{service.description}</p>
                   <Link
-                    href={`/services#${service.slug}`}
+                    href={`/services/${service.slug}`}
                     className="inline-flex items-center gap-1 font-semibold text-accent-dark hover:text-navy-dark transition-colors"
                   >
                     Read More <ArrowUpRight size={16} />

@@ -98,6 +98,7 @@ export const moreServices = [
     description:
       "Professional curtain cleaning removes dust, allergens, and odours while preserving fabric quality.",
     icon: "Blinds",
+    image: "/images/services/upholstery-cleaning.jpg",
   },
   {
     slug: "leather-cleaning",
@@ -105,6 +106,7 @@ export const moreServices = [
     description:
       "Specialist leather cleaning and conditioning that removes stains and restores a soft, supple finish.",
     icon: "Armchair",
+    image: "/images/services/sofa-cleaning.jpg",
   },
   {
     slug: "mattress-cleaning",
@@ -112,6 +114,7 @@ export const moreServices = [
     description:
       "Deep mattress cleaning eliminates dust mites, stains, and allergens for a healthier night's sleep.",
     icon: "BedDouble",
+    image: "/images/services/stain-removal.jpg",
   },
   {
     slug: "pet-stain-removal",
@@ -119,6 +122,7 @@ export const moreServices = [
     description:
       "Targeted treatment that removes pet stains and odours safely from carpets and upholstery.",
     icon: "PawPrint",
+    image: "/images/services/odour-removal.jpg",
   },
   {
     slug: "end-of-tenancy-deep-clean",
@@ -126,6 +130,196 @@ export const moreServices = [
     description:
       "Thorough end of tenancy cleaning to help secure your deposit, covering carpets, upholstery, and more.",
     icon: "KeyRound",
+    image: "/images/services/carpet-cleaning.jpg",
+  },
+];
+
+export const allServices = [...services, ...moreServices];
+
+function buildIncluded(word: string, extra: string) {
+  return [
+    `Deep ${word} Cleaning`,
+    "Stain Removal Treatment",
+    "Dust Extraction Process",
+    "Odour Elimination Service",
+    "Steam Cleaning Method",
+    extra,
+    "Allergen Reduction Service",
+    "Eco Friendly Products",
+    "Fast Drying Process",
+    "Trained & Insured Technicians",
+  ];
+}
+
+export const serviceDetails: Record<
+  string,
+  {
+    intro: string[];
+    included: string[];
+    faq: { q: string; a: string }[];
+  }
+> = {
+  "carpet-cleaning": {
+    intro: [
+      "We provide professional carpet cleaning services across the UK, using advanced cleaning equipment and safe methods to remove deep stains, dust, allergens, and unpleasant odors from all types of carpet. Our expert team carefully restores freshness, comfort, and hygiene while protecting fibre quality and extending carpet life.",
+      "Our reliable cleaning process is designed to improve indoor air quality and maintain a healthier environment. We focus on delivering high-quality results with attention to detail, eco-friendly solutions, and complete customer satisfaction for every carpet cleaning project.",
+    ],
+    included: buildIncluded("Carpet", "Fibre Protection Layer"),
+    faq: [
+      {
+        q: "What types of carpet do you clean?",
+        a: "We clean wool, synthetic, berber, and all types of fitted and loose carpets.",
+      },
+    ],
+  },
+  "upholstery-cleaning": {
+    intro: [
+      "We provide professional upholstery cleaning services across the UK, using advanced cleaning equipment and safe methods to remove deep stains, dust, allergens, and unpleasant odors from all types of furniture. Our expert team carefully restores freshness, comfort, and hygiene while protecting fabric quality and extending furniture life.",
+      "Our reliable cleaning process is designed to improve indoor air quality and maintain a healthier environment. We focus on delivering high-quality results with attention to detail, eco-friendly solutions, and complete customer satisfaction for every upholstery cleaning project.",
+    ],
+    included: buildIncluded("Upholstery", "Fabric Protection Layer"),
+    faq: [
+      {
+        q: "What types of upholstery do you clean?",
+        a: "We clean fabric, leather, velvet, suede, and all upholstered furniture types.",
+      },
+    ],
+  },
+  "rug-cleaning": {
+    intro: [
+      "We provide professional rug cleaning services across the UK, using advanced cleaning equipment and safe methods to remove deep stains, dust, allergens, and unpleasant odors from all types of rugs. Our expert team carefully restores freshness, comfort, and hygiene while protecting fibre quality and extending rug life.",
+      "Our reliable cleaning process is designed to improve indoor air quality and maintain a healthier environment. We focus on delivering high-quality results with attention to detail, eco-friendly solutions, and complete customer satisfaction for every rug cleaning project.",
+    ],
+    included: buildIncluded("Rug", "Fringe & Fibre Care"),
+    faq: [
+      {
+        q: "What types of rugs do you clean?",
+        a: "We clean wool, silk, synthetic, and hand-woven rugs of all sizes.",
+      },
+    ],
+  },
+  "sofa-cleaning": {
+    intro: [
+      "We provide professional sofa cleaning services across the UK, using advanced cleaning equipment and safe methods to remove deep stains, dust, allergens, and unpleasant odors from all types of sofas. Our expert team carefully restores freshness, comfort, and hygiene while protecting fabric quality and extending sofa life.",
+      "Our reliable cleaning process is designed to improve indoor air quality and maintain a healthier environment. We focus on delivering high-quality results with attention to detail, eco-friendly solutions, and complete customer satisfaction for every sofa cleaning project.",
+    ],
+    included: buildIncluded("Sofa", "Fabric Protection Layer"),
+    faq: [
+      {
+        q: "What sofa fabrics can you clean?",
+        a: "We clean fabric, leather, velvet, suede, and all upholstered sofa types.",
+      },
+    ],
+  },
+  "stain-removal": {
+    intro: [
+      "We provide professional stain removal services across the UK, using advanced cleaning equipment and safe methods to lift deep stains, dust, allergens, and unpleasant odors from carpets and furniture. Our expert team carefully restores freshness, comfort, and hygiene while protecting fibre and fabric quality.",
+      "Our reliable cleaning process is designed to improve indoor air quality and maintain a healthier environment. We focus on delivering high-quality results with attention to detail, eco-friendly solutions, and complete customer satisfaction for every stain removal project.",
+    ],
+    included: buildIncluded("Stain", "Fabric & Fibre Protection"),
+    faq: [
+      {
+        q: "What types of stains can you remove?",
+        a: "We treat food, drink, pet, ink, and general household stains from carpets and furniture.",
+      },
+    ],
+  },
+  "odour-removal": {
+    intro: [
+      "We provide professional odour removal services across the UK, using advanced cleaning equipment and safe methods to eliminate deep-set odours, dust, and allergens from carpets and furniture. Our expert team carefully restores freshness, comfort, and hygiene while protecting fibre and fabric quality.",
+      "Our reliable cleaning process is designed to improve indoor air quality and maintain a healthier environment. We focus on delivering high-quality results with attention to detail, eco-friendly solutions, and complete customer satisfaction for every odour removal project.",
+    ],
+    included: buildIncluded("Odour", "Fabric & Fibre Protection"),
+    faq: [
+      {
+        q: "What causes bad odours in carpets and furniture?",
+        a: "Pets, smoke, moisture, and everyday use can all trap odours deep in fibres.",
+      },
+    ],
+  },
+  "curtain-cleaning": {
+    intro: [
+      "We provide professional curtain cleaning services across the UK, using advanced cleaning equipment and safe methods to remove dust, allergens, and unpleasant odors from all types of curtains and drapes. Our expert team carefully restores freshness and hygiene while preserving fabric quality.",
+      "Our reliable cleaning process is designed to improve indoor air quality and maintain a healthier environment, with complete customer satisfaction for every curtain cleaning project.",
+    ],
+    included: buildIncluded("Curtain", "Fabric Protection Layer"),
+    faq: [
+      {
+        q: "Can you clean curtains without taking them down?",
+        a: "Yes, we offer both in-situ and take-down cleaning depending on the fabric and fitting.",
+      },
+    ],
+  },
+  "leather-cleaning": {
+    intro: [
+      "We provide professional leather cleaning services across the UK, using specialist products and safe methods to remove stains and dirt while conditioning and restoring a soft, supple finish. Our expert team carefully protects leather quality and extends the life of your furniture.",
+      "Our reliable cleaning process is designed to keep leather looking and feeling its best, with complete customer satisfaction for every leather cleaning project.",
+    ],
+    included: buildIncluded("Leather", "Leather Conditioning Treatment"),
+    faq: [
+      {
+        q: "Is leather cleaning safe for all leather types?",
+        a: "We assess your leather type first and use tailored, safe products for the best result.",
+      },
+    ],
+  },
+  "mattress-cleaning": {
+    intro: [
+      "We provide professional mattress cleaning services across the UK, using advanced cleaning equipment and safe methods to remove dust mites, stains, allergens, and unpleasant odors. Our expert team carefully restores freshness and hygiene for a healthier night's sleep.",
+      "Our reliable cleaning process is designed to improve indoor air quality and maintain a healthier environment, with complete customer satisfaction for every mattress cleaning project.",
+    ],
+    included: buildIncluded("Mattress", "Dust Mite Elimination"),
+    faq: [
+      {
+        q: "How often should a mattress be professionally cleaned?",
+        a: "We recommend a deep clean every 6-12 months to reduce dust mites and allergens.",
+      },
+    ],
+  },
+  "pet-stain-removal": {
+    intro: [
+      "We provide professional pet stain removal services across the UK, using advanced cleaning equipment and safe methods to remove pet stains, dirt, allergens, and unpleasant odors from carpets and upholstery. Our expert team carefully restores freshness and hygiene throughout your home.",
+      "Our reliable cleaning process is designed to neutralise odours at the source and maintain a healthier environment, with complete customer satisfaction for every pet stain removal project.",
+    ],
+    included: buildIncluded("Pet Stain", "Pet Odour Neutraliser"),
+    faq: [
+      {
+        q: "Will the pet odour come back after cleaning?",
+        a: "Our treatment neutralises odour at the source rather than masking it, for lasting results.",
+      },
+    ],
+  },
+  "end-of-tenancy-deep-clean": {
+    intro: [
+      "We provide professional end of tenancy deep cleaning services across the UK, using advanced cleaning equipment and safe methods to remove deep stains, dust, allergens, and unpleasant odors from carpets and upholstery. Our expert team helps your property look its best for the final inspection.",
+      "Our reliable cleaning process is designed to help secure your deposit with complete customer satisfaction for every end of tenancy cleaning project.",
+    ],
+    included: buildIncluded("End Of Tenancy", "Fabric & Fibre Protection"),
+    faq: [
+      {
+        q: "Will end of tenancy cleaning help me get my deposit back?",
+        a: "Our thorough deep clean is designed to meet the standard landlords and agents expect.",
+      },
+    ],
+  },
+};
+
+export const sharedFaqs = [
+  {
+    q: "Can you remove tough stains?",
+    a: "Yes, our advanced equipment and treatments are effective on most tough and set-in stains.",
+  },
+  {
+    q: "Are your cleaning products safe?",
+    a: "Yes, we use safe, eco-friendly products that are gentle on your home and family.",
+  },
+  {
+    q: "How long does drying take?",
+    a: "Most surfaces are dry within a few hours thanks to our fast-drying cleaning methods.",
+  },
+  {
+    q: "Do you offer UK-wide service?",
+    a: "Yes, we provide professional cleaning services to homes and businesses across the UK.",
   },
 ];
 

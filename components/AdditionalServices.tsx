@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Armchair, BedDouble, Blinds, KeyRound, PawPrint, SprayCan, type LucideIcon } from "lucide-react";
 import { moreServices } from "@/lib/data";
@@ -32,20 +33,22 @@ export default function AdditionalServices() {
             const Icon = iconMap[service.icon];
             return (
               <StaggerItem key={service.slug}>
-                <motion.div
-                  id={service.slug}
-                  className="flex gap-4 bg-white rounded-2xl border border-black/5 p-6 shadow-sm h-full scroll-mt-28"
-                  whileHover={{ y: -4, boxShadow: "0 16px 32px -12px rgba(11,15,82,0.15)" }}
-                  transition={{ duration: 0.25, ease: "easeOut" }}
-                >
-                  <div className="w-12 h-12 shrink-0 rounded-full bg-navy/10 text-navy flex items-center justify-center">
-                    <Icon size={22} />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-navy-dark mb-1">{service.title}</h3>
-                    <p className="text-sm text-slate-600">{service.description}</p>
-                  </div>
-                </motion.div>
+                <Link href={`/services/${service.slug}`} className="block h-full">
+                  <motion.div
+                    id={service.slug}
+                    className="flex gap-4 bg-white rounded-2xl border border-black/5 p-6 shadow-sm h-full scroll-mt-28"
+                    whileHover={{ y: -4, boxShadow: "0 16px 32px -12px rgba(11,15,82,0.15)" }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
+                  >
+                    <div className="w-12 h-12 shrink-0 rounded-full bg-navy/10 text-navy flex items-center justify-center">
+                      <Icon size={22} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-navy-dark mb-1">{service.title}</h3>
+                      <p className="text-sm text-slate-600">{service.description}</p>
+                    </div>
+                  </motion.div>
+                </Link>
               </StaggerItem>
             );
           })}
