@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageHero from "@/components/PageHero";
+import PhotoHero from "@/components/PhotoHero";
 import ContactInfoCards from "@/components/ContactInfoCards";
 import ContactFormSection from "@/components/ContactFormSection";
 
@@ -12,7 +12,11 @@ export const metadata: Metadata = {
 export default function ContactUsPage() {
   return (
     <>
-      <PageHero title="Contact Us" breadcrumbLabel="Contact Us" />
+      <PhotoHero
+        title="Contact Us"
+        breadcrumbLabel="Contact Us"
+        image="/images/services/sofa-cleaning.jpg"
+      />
       <ContactInfoCards />
       <ContactFormSection />
     </>

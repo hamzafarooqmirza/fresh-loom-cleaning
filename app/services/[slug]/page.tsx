@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { allServices, serviceDetails, sharedFaqs } from "@/lib/data";
-import ServiceDetailHero from "@/components/ServiceDetailHero";
+import PhotoHero from "@/components/PhotoHero";
 import ServiceSidebar from "@/components/ServiceSidebar";
 import ServiceDetailContent from "@/components/ServiceDetailContent";
 import Process from "@/components/Process";
@@ -41,7 +41,7 @@ export default async function ServiceDetailPage({
 
   return (
     <>
-      <ServiceDetailHero title={service.title} image={service.image} />
+      <PhotoHero title={service.title} image={service.image} />
 
       <section className="py-16 lg:py-24">
         <div className="container-page grid lg:grid-cols-[300px_1fr] gap-12">

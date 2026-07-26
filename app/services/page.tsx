@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageHero from "@/components/PageHero";
+import PhotoHero from "@/components/PhotoHero";
 import ServicesGrid from "@/components/ServicesGrid";
 import AdditionalServices from "@/components/AdditionalServices";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -14,7 +14,11 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <PageHero title="Our Services" breadcrumbLabel="Services" />
+      <PhotoHero
+        title="Our Services"
+        breadcrumbLabel="Services"
+        image="/images/services/carpet-cleaning.jpg"
+      />
       <ServicesGrid />
       <AdditionalServices />
       <WhyChooseUs />

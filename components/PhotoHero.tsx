@@ -2,7 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
-export default function ServiceDetailHero({ title, image }: { title: string; image: string }) {
+export default function PhotoHero({
+  title,
+  image,
+  breadcrumbLabel,
+}: {
+  title: string;
+  image: string;
+  breadcrumbLabel?: string;
+}) {
   return (
     <section className="relative overflow-hidden bg-navy-dark">
       <Image
@@ -23,7 +31,7 @@ export default function ServiceDetailHero({ title, image }: { title: string; ima
             Home
           </Link>
           <ChevronRight size={14} />
-          <span className="text-accent uppercase">{title}</span>
+          <span className="text-accent uppercase">{breadcrumbLabel ?? title}</span>
         </div>
       </div>
     </section>
