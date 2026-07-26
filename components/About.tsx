@@ -1,25 +1,27 @@
 import { ArrowUpRight, SprayCan } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import Reveal from "./Reveal";
 
 export default function About() {
   return (
     <section id="about" className="py-16 lg:py-24">
       <div className="container-page grid lg:grid-cols-2 gap-12 items-center">
-        <div className="relative">
+        <Reveal direction="left" className="relative">
           <Image
-            src="/images/services/carpet-cleaning.svg"
+            src="/images/services/carpet-cleaning.jpg"
             alt="About Fresh Loom Cleaning"
-            width={800}
-            height={534}
+            width={1000}
+            height={667}
             className="rounded-3xl shadow-xl w-full h-auto"
           />
           <div className="absolute -bottom-6 -right-6 bg-navy-dark text-white rounded-2xl px-6 py-4 shadow-xl hidden sm:block">
             <div className="text-2xl font-extrabold">10+</div>
             <div className="text-sm text-white/80">Experience</div>
           </div>
-        </div>
+        </Reveal>
 
-        <div>
+        <Reveal direction="right" delay={0.1}>
           <span className="eyebrow mb-4">
             <SprayCan size={16} /> About us
           </span>
@@ -38,10 +40,10 @@ export default function About() {
             help extend the life of your carpets, rugs, sofas, and upholstery while creating a
             healthier indoor environment.
           </p>
-          <a href="#contact" className="btn-accent">
+          <Link href="/about-us" className="btn-accent">
             Read More <ArrowUpRight size={18} />
-          </a>
-        </div>
+          </Link>
+        </Reveal>
       </div>
     </section>
   );

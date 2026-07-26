@@ -3,34 +3,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight, SprayCan } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { services } from "@/lib/data";
-import Reveal from "./Reveal";
 import { StaggerGroup, StaggerItem } from "./Stagger";
 
-export default function Services() {
+export default function ServicesGrid() {
   return (
-    <section id="services" className="py-16 lg:py-24 bg-light">
+    <section className="py-16 lg:py-24">
       <div className="container-page">
-        <Reveal className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div>
-            <span className="eyebrow mb-4">
-              <SprayCan size={16} /> Our Services
-            </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark">
-              The Services We Provide for Our Customers
-            </h2>
-          </div>
-          <Link href="/services" className="btn-outline shrink-0">
-            More Services <ArrowUpRight size={18} />
-          </Link>
-        </Reveal>
-
         <StaggerGroup className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
             <StaggerItem key={service.slug}>
               <motion.div
-                className="bg-white rounded-2xl overflow-hidden shadow-sm group h-full"
+                id={service.slug}
+                className="bg-white rounded-2xl overflow-hidden shadow-sm border border-black/5 group h-full scroll-mt-28"
                 whileHover={{ y: -8, boxShadow: "0 20px 40px -12px rgba(11,15,82,0.18)" }}
                 transition={{ duration: 0.25, ease: "easeOut" }}
               >
@@ -50,7 +36,7 @@ export default function Services() {
                     href={`/services/${service.slug}`}
                     className="inline-flex items-center gap-1 font-semibold text-accent-dark hover:text-navy-dark transition-colors"
                   >
-                    Read More <ArrowUpRight size={16} />
+                    View Details <ArrowUpRight size={16} />
                   </Link>
                 </div>
               </motion.div>

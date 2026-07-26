@@ -37,19 +37,19 @@ export default function AppointmentForm() {
           required
           type="text"
           placeholder="Your Name"
-          className="rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-blue"
+          className="rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
         />
         <input
           required
           type="email"
           placeholder="Your Email"
-          className="rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-blue"
+          className="rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
         />
       </div>
       <input
         type="tel"
         placeholder="Your Phone"
-        className="rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-blue"
+        className="rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
       />
 
       <div>
@@ -79,7 +79,7 @@ export default function AppointmentForm() {
       <textarea
         placeholder="Message"
         rows={4}
-        className="rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-blue"
+        className="rounded-xl border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
       />
 
       <button type="submit" className="btn-accent justify-center">
