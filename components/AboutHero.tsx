@@ -50,6 +50,18 @@ export default function AboutHero() {
           </div>
         </motion.div>
       </div>
+
+      <svg
+        className="block w-full h-10 sm:h-16 text-white"
+        viewBox="0 0 1000 100"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          fill="currentColor"
+          d="M1000,4.3V0H0v4.3C0.9,23.1,126.7,99.2,500,100S1000,22.7,1000,4.3z"
+        />
+      </svg>
     </section>
   );
 }
