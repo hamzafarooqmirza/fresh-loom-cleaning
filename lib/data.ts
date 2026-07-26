@@ -58,36 +58,42 @@ export const services = [
     title: "Carpet Cleaning",
     description: "Deep cleaning removes stains, dirt, and allergens for freshness.",
     image: "/images/services/carpet-cleaning.jpg",
+    icon: "SprayCan",
   },
   {
     slug: "upholstery-cleaning",
     title: "Upholstery Cleaning",
     description: "Restore furniture freshness by removing stains, dust, and allergens.",
     image: "/images/services/upholstery-cleaning.jpg",
+    icon: "Sofa",
   },
   {
     slug: "rug-cleaning",
     title: "Rug Cleaning",
     description: "Professional rug cleaning removes dirt, stains, and trapped allergens.",
     image: "/images/services/rug-cleaning.jpg",
+    icon: "Waves",
   },
   {
     slug: "sofa-cleaning",
     title: "Sofa Cleaning",
     description: "Deep sofa cleaning removes stains, dust, and unpleasant odours.",
     image: "/images/services/sofa-cleaning.jpg",
+    icon: "Armchair",
   },
   {
     slug: "stain-removal",
     title: "Stain Removal",
     description: "Effective stain treatment removes tough marks from all surfaces.",
     image: "/images/services/stain-removal.jpg",
+    icon: "Droplets",
   },
   {
     slug: "odour-removal",
     title: "Odour Removal",
     description: "Eliminates bad smells caused by pets, smoke, and moisture for a fresher home.",
     image: "/images/services/odour-removal.jpg",
+    icon: "Wind",
   },
 ];
 
