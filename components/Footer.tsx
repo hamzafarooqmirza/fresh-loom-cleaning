@@ -80,7 +80,7 @@ export default function Footer() {
       </div>
 
       <div className="bg-navy-dark border-t border-white/10">
-        <div className="container-page py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+        <div className="container-page py-6 pb-24 sm:pb-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
           <p>
             Copyright © {new Date().getFullYear()} {siteInfo.legalName}. All Rights Reserved
           </p>

@@ -22,7 +22,7 @@ export default function PhotoHero({
         sizes="100vw"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy-dark/80 to-transparent" />
-      <div className="absolute -right-16 -bottom-24 w-72 h-72 rounded-full bg-accent/80 -z-0" />
+      <div className="hidden sm:block absolute -right-16 -bottom-24 w-72 h-72 rounded-full bg-accent/80 -z-0" />
 
       <div className="container-page relative py-16 lg:py-20">
         <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">{title}</h1>

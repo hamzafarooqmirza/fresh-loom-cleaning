@@ -77,7 +77,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            className="hidden sm:flex gap-10"
+            className="flex gap-6 sm:gap-10"
             initial="hidden"
             animate="visible"
             custom={0.4}
@@ -85,10 +85,10 @@ export default function Hero() {
           >
             {stats.map((s, i) => (
               <div key={s.label}>
-                <div className={`text-3xl font-bold font-heading ${statColors[i % statColors.length]}`}>
+                <div className={`text-2xl sm:text-3xl font-bold font-heading ${statColors[i % statColors.length]}`}>
                   <AnimatedCounter value={s.value} />
                 </div>
-                <div className="text-sm text-slate-500 mt-1">{s.label}</div>
+                <div className="text-xs sm:text-sm text-slate-500 mt-1">{s.label}</div>
               </div>
             ))}
           </motion.div>
