@@ -6,6 +6,8 @@ export const siteInfo = {
   email: "info@freshloomcleaning.co.uk",
   address: "2/2, 156 Charles St, Glasgow G21 2QH, United Kingdom",
   hours: ["Mon-Fri: 24hrs", "Sunday: Closed"],
+  mapEmbedUrl:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4476.981500466958!2d-4.230314718005873!3d55.87150142346282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48884531d6da7d63%3A0x69cc73504a94c2b4!2sFRESHLOOM%20CARPET%20%26%20UPHOLSTERY%20CLEANING%20LIMI!5e0!3m2!1sen!2s!4v1782135488420!5m2!1sen!2s",
 };
 
 export const aboutPage = {
@@ -30,15 +32,24 @@ export const aboutPage = {
       "We are committed to delivering high-quality results with attention to detail and customer satisfaction at the core of our service. Whether you need residential or commercial cleaning, our reliable solutions restore the original beauty of your carpets and furniture while extending their lifespan. Contact Freshloom Cleaning Services today for trusted, affordable, and professional cleaning across the UK.",
     ],
   },
-  mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4476.981500466958!2d-4.230314718005873!3d55.87150142346282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48884531d6da7d63%3A0x69cc73504a94c2b4!2sFRESHLOOM%20CARPET%20%26%20UPHOLSTERY%20CLEANING%20LIMI!5e0!3m2!1sen!2s!4v1782135488420!5m2!1sen!2s",
+};
+
+export const contactPage = {
+  intro:
+    "Have a question or ready to book your cleaning? Reach out to Freshloom Carpet & Upholstery Cleaning Limited — our team is on hand to help with a fast, friendly response.",
+  cards: [
+    { icon: "MapPin", title: "Our Address", lines: [siteInfo.address] },
+    { icon: "Phone", title: "Phone Number", lines: [siteInfo.phone] },
+    { icon: "Mail", title: "Email Address", lines: [siteInfo.email] },
+    { icon: "Clock", title: "Working Hours", lines: siteInfo.hours },
+  ],
 };
 
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
-  { label: "Services", href: "/#services" },
-  { label: "Contact Us", href: "/#contact" },
+  { label: "Services", href: "/services" },
+  { label: "Contact Us", href: "/contact-us" },
 ];
 
 export const services = [
@@ -81,11 +92,41 @@ export const services = [
 ];
 
 export const moreServices = [
-  "Curtain Cleaning",
-  "Leather Cleaning",
-  "Mattress Cleaning",
-  "Pet Stain Removal",
-  "End Of Tenancy Deep Clean",
+  {
+    slug: "curtain-cleaning",
+    title: "Curtain Cleaning",
+    description:
+      "Professional curtain cleaning removes dust, allergens, and odours while preserving fabric quality.",
+    icon: "Blinds",
+  },
+  {
+    slug: "leather-cleaning",
+    title: "Leather Cleaning",
+    description:
+      "Specialist leather cleaning and conditioning that removes stains and restores a soft, supple finish.",
+    icon: "Armchair",
+  },
+  {
+    slug: "mattress-cleaning",
+    title: "Mattress Cleaning",
+    description:
+      "Deep mattress cleaning eliminates dust mites, stains, and allergens for a healthier night's sleep.",
+    icon: "BedDouble",
+  },
+  {
+    slug: "pet-stain-removal",
+    title: "Pet Stain Removal",
+    description:
+      "Targeted treatment that removes pet stains and odours safely from carpets and upholstery.",
+    icon: "PawPrint",
+  },
+  {
+    slug: "end-of-tenancy-deep-clean",
+    title: "End Of Tenancy Deep Clean",
+    description:
+      "Thorough end of tenancy cleaning to help secure your deposit, covering carpets, upholstery, and more.",
+    icon: "KeyRound",
+  },
 ];
 
 export const stats = [

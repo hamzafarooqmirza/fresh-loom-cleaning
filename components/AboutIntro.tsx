@@ -18,7 +18,7 @@ export default function AboutIntro() {
 
         <Reveal direction="right" delay={0.1} className="rounded-2xl overflow-hidden shadow-xl">
           <iframe
-            src={aboutPage.mapEmbedUrl}
+            src={siteInfo.mapEmbedUrl}
             width="600"
             height="400"
             loading="lazy"

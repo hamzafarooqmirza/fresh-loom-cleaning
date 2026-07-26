@@ -46,7 +46,7 @@ export default function Header() {
                   {services.map((s) => (
                     <Link
                       key={s.slug}
-                      href="/#services"
+                      href={`/services#${s.slug}`}
                       className="block px-4 py-2 text-sm text-navy-dark hover:bg-light hover:text-accent"
                     >
                       {s.title}
@@ -72,7 +72,7 @@ export default function Header() {
           <button aria-label="Search" className="text-navy hover:text-accent transition-colors">
             <Search size={20} />
           </button>
-          <Link href="/#contact" className="btn-navy">
+          <Link href="/contact-us" className="btn-navy">
             Get a Quote
           </Link>
         </div>
@@ -108,7 +108,7 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              <Link href="/#contact" onClick={() => setOpen(false)} className="btn-navy mt-2 justify-center">
+              <Link href="/contact-us" onClick={() => setOpen(false)} className="btn-navy mt-2 justify-center">
                 Get a Quote
               </Link>
             </nav>

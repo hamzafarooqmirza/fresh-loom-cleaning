@@ -56,7 +56,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {footerServiceLinks.map((s) => (
               <li key={s}>
-                <Link href="/#services" className="hover:text-accent transition-colors">
+                <Link href={`/services#${s.toLowerCase().replace(/\s+/g, "-")}`} className="hover:text-accent transition-colors">
                   {s}
                 </Link>
               </li>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import AboutHero from "@/components/AboutHero";
+import PageHero from "@/components/PageHero";
 import TrustedExperts from "@/components/TrustedExperts";
 import VisionMission from "@/components/VisionMission";
 import AboutIntro from "@/components/AboutIntro";
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function AboutUsPage() {
   return (
     <>
-      <AboutHero />
+      <PageHero title="About Us" breadcrumbLabel="About Us" badge={{ value: "10+", label: "Experience" }} />
       <TrustedExperts />
       <VisionMission />
       <AboutIntro />

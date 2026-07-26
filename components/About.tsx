@@ -1,5 +1,6 @@
 import { ArrowUpRight, SprayCan } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "./Reveal";
 
 export default function About() {
@@ -39,9 +40,9 @@ export default function About() {
             help extend the life of your carpets, rugs, sofas, and upholstery while creating a
             healthier indoor environment.
           </p>
-          <a href="#contact" className="btn-accent">
+          <Link href="/about-us" className="btn-accent">
             Read More <ArrowUpRight size={18} />
-          </a>
+          </Link>
         </Reveal>
       </div>
     </section>

@@ -5,7 +5,15 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
-export default function AboutHero() {
+export default function PageHero({
+  title,
+  breadcrumbLabel,
+  badge,
+}: {
+  title: string;
+  breadcrumbLabel: string;
+  badge?: { value: string; label: string };
+}) {
   return (
     <section className="relative overflow-hidden bg-cream">
       <div className="container-page grid lg:grid-cols-2 gap-12 items-center py-16 lg:py-20">
@@ -15,14 +23,14 @@ export default function AboutHero() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as const }}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-navy-dark leading-tight mb-4">
-            About Us
+            {title}
           </h1>
           <div className="flex items-center gap-2 text-sm font-medium text-slate-500">
             <Link href="/" className="hover:text-accent transition-colors">
               Home
             </Link>
             <ChevronRight size={14} />
-            <span className="text-accent">About Us</span>
+            <span className="text-accent">{breadcrumbLabel}</span>
           </div>
         </motion.div>
 
@@ -43,10 +51,12 @@ export default function AboutHero() {
               className="drop-shadow-2xl w-full h-full object-contain"
               priority
             />
-            <div className="absolute -bottom-6 -left-6 bg-navy-dark text-white rounded-2xl px-6 py-4 shadow-xl">
-              <div className="text-2xl font-extrabold">10+</div>
-              <div className="text-sm text-white/80">Experience</div>
-            </div>
+            {badge && (
+              <div className="absolute -bottom-6 -left-6 bg-navy-dark text-white rounded-2xl px-6 py-4 shadow-xl">
+                <div className="text-2xl font-extrabold">{badge.value}</div>
+                <div className="text-sm text-white/80">{badge.label}</div>
+              </div>
+            )}
           </div>
         </motion.div>
       </div>
