@@ -30,7 +30,7 @@ export default function Header() {
             src="/images/logo.png"
             alt={siteInfo.name}
             width={215}
-            height={57}
+            height={60}
             priority
           />
         </Link>

@@ -17,6 +17,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://freshloomcleaning.co.uk"),
   title: "Fresh Loom Cleaning | Carpet & Upholstery Cleaning Services",
   description:
     "Professional carpet, sofa, rug, and upholstery cleaning using advanced equipment to remove stains, dirt, and allergens effectively.",

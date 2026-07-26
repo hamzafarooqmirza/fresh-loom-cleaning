@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="container-page py-16 grid md:grid-cols-4 gap-10">
           <div>
             <div className="inline-block bg-white rounded-lg p-2 mb-4">
-              <Image src="/images/logo.png" alt={siteInfo.name} width={190} height={51} />
+              <Image src="/images/logo.png" alt={siteInfo.name} width={190} height={53} />
             </div>
             <p className="text-sm mb-6">
               Freshloom Carpet &amp; Upholstery Cleaning Limited provides professional cleaning
