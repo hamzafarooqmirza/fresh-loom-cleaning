@@ -3,7 +3,7 @@ export const siteInfo = {
   legalName: "Freshloom Carpet & Upholstery Cleaning Limited",
   phone: "+44 777 887 9063",
   phoneHref: "tel:+447778879063",
-  email: "info@freshloomcleaning.co.uk",
+  email: "freshloomcarpetcleaning@gmail.com",
   address: "2/2, 156 Charles St, Glasgow G21 2QH, United Kingdom",
   hours: ["Mon-Fri: 24hrs", "Sunday: Closed"],
   mapEmbedUrl:
