@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const BLOCKED_COUNTRIES = ["ZA"];
+const ALLOWED_COUNTRIES = ["PK", "GB"];
 
 export function proxy(request: NextRequest) {
   const country = request.headers.get("x-vercel-ip-country");
 
-  if (country && BLOCKED_COUNTRIES.includes(country)) {
+  if (country && !ALLOWED_COUNTRIES.includes(country)) {
     return new NextResponse("Access to this site is not available in your region.", {
       status: 403,
     });
