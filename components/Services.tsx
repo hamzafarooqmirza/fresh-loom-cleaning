@@ -40,6 +40,7 @@ export default function Services() {
                     alt={service.title}
                     width={800}
                     height={534}
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
