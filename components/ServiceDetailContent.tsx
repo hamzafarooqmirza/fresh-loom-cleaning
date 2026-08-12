@@ -23,6 +23,7 @@ export default function ServiceDetailContent({
         alt={title}
         width={800}
         height={534}
+        sizes="(min-width: 1024px) 800px, 100vw"
         className="rounded-2xl shadow-lg w-full h-auto mb-8"
       />
 

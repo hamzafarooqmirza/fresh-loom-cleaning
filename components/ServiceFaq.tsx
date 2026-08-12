@@ -66,6 +66,7 @@ export default function ServiceFaq({
             alt="Freshloom cleaning team at work"
             width={800}
             height={534}
+            sizes="(min-width: 1024px) 50vw, 100vw"
             className="rounded-2xl shadow-lg w-full h-auto"
           />
         </Reveal>

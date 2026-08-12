@@ -13,6 +13,7 @@ export default function About() {
             alt="About Fresh Loom Cleaning"
             width={1000}
             height={667}
+            sizes="(min-width: 1024px) 50vw, 100vw"
             className="rounded-3xl shadow-xl w-full h-auto"
           />
           <div className="absolute -bottom-6 -right-6 bg-navy-dark text-white rounded-2xl px-6 py-4 shadow-xl hidden sm:block">

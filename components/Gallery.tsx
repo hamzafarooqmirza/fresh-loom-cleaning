@@ -37,6 +37,7 @@ export default function Gallery() {
                   alt={`${item.title} before and after`}
                   width={1408}
                   height={768}
+                  sizes="(min-width: 768px) 50vw, 100vw"
                   className="w-full h-auto object-cover"
                 />
               </motion.div>
