@@ -6,7 +6,8 @@ const ALLOWED_COUNTRIES = ["PK", "GB"];
 // Crawlers/verifiers (Google Ads landing-page checks, Search, Bing, etc.) must
 // always be able to reach the site regardless of their crawl location, or ads
 // get disapproved and pages drop out of search results.
-const ALLOWED_BOT_UA = /googlebot|adsbot-google|google-inspectiontool|mediapartners-google|bingbot|bingpreview|duckduckbot|applebot/i;
+const ALLOWED_BOT_UA =
+  /googlebot|adsbot-google|google-inspectiontool|mediapartners-google|bingbot|bingpreview|duckduckbot|applebot|chrome-lighthouse|lighthouse|pagespeed|gtmetrix|pingdom|uptimerobot|facebookexternalhit|twitterbot|linkedinbot|whatsapp|slackbot|w3c_validator/i;
 
 export function proxy(request: NextRequest) {
   const userAgent = request.headers.get("user-agent") ?? "";
