@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { allServices, serviceDetails, sharedFaqs, siteInfo } from "@/lib/data";
+import { SITE_URL, BUSINESS_ID, breadcrumbSchema } from "@/lib/seo";
 import PhotoHero from "@/components/PhotoHero";
 import ServiceSidebar from "@/components/ServiceSidebar";
 import ServiceDetailContent from "@/components/ServiceDetailContent";
@@ -24,6 +26,9 @@ export async function generateMetadata({
   return {
     title: `${service.title} | ${siteInfo.name}`,
     description: service.description,
+    alternates: {
+      canonical: `/services/${slug}`,
+    },
   };
 }
 
@@ -39,8 +44,51 @@ export default async function ServiceDetailPage({
 
   const faqs = [...detail.faq, ...sharedFaqs];
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    description: service.description,
+    url: `${SITE_URL}/services/${slug}`,
+    serviceType: service.title,
+    provider: { "@id": BUSINESS_ID },
+    areaServed: {
+      "@type": "City",
+      name: "Glasgow",
+    },
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: service.title, path: `/services/${slug}` },
+  ]);
+
   return (
     <>
+      <Script id="service-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(serviceSchema)}
+      </Script>
+      <Script id="service-faq-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(faqSchema)}
+      </Script>
+      <Script id="service-breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(breadcrumbs)}
+      </Script>
+
       <PhotoHero title={service.title} image={service.image} />
 
       <section className="py-16 lg:py-24">

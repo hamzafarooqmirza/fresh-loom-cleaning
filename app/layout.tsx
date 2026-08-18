@@ -5,10 +5,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { siteInfo } from "@/lib/data";
+import { SITE_URL, BUSINESS_ID } from "@/lib/seo";
 import "./globals.css";
 
 const GTM_ID = "GTM-TNCWZXNX";
-const SITE_URL = "https://freshloomcleaning.co.uk";
 
 const quicksand = Quicksand({
   variable: "--font-quicksand",
@@ -33,6 +33,7 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": BUSINESS_ID,
   name: siteInfo.name,
   legalName: siteInfo.legalName,
   image: `${SITE_URL}/images/logo.png`,
@@ -46,6 +47,18 @@ const localBusinessSchema = {
     postalCode: "G21 2QH",
     addressCountry: "GB",
   },
+  areaServed: {
+    "@type": "City",
+    name: "Glasgow",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "00:00",
+      closes: "23:59",
+    },
+  ],
 };
 
 export default function RootLayout({
