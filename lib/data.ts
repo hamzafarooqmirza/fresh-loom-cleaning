@@ -7,7 +7,7 @@ export const siteInfo = {
   address: "2/2, 156 Charles St, Glasgow G21 2QH, United Kingdom",
   hours: ["Mon-Fri: 24hrs", "Sunday: Closed"],
   mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4476.981500466958!2d-4.230314718005873!3d55.87150142346282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48884531d6da7d63%3A0x69cc73504a94c2b4!2sFRESHLOOM%20CARPET%20%26%20UPHOLSTERY%20CLEANING%20LIMI!5e0!3m2!1sen!2s!4v1782135488420!5m2!1sen!2s",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2305.5288811552555!2d-4.228276223235253!3d55.871501482842405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa606c6fad9a3c415%3A0x8ce09aac9b3ec02f!2sFresh%20Loom%20Carpet%20Cleaning!5e1!3m2!1sen!2s!4v1787084656463!5m2!1sen!2s",
 };
 
 export const aboutPage = {
