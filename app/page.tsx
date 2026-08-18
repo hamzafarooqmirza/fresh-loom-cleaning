@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import HomeHero from "@/components/home/HomeHero";
-import TrustBenefits from "@/components/home/TrustBenefits";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
 import WhyChooseFreshLoom from "@/components/home/WhyChooseFreshLoom";
 import CarpetCleaningSection from "@/components/home/CarpetCleaningSection";
 import UpholsterySection from "@/components/home/UpholsterySection";
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <HomeHero />
-      <TrustBenefits />
+      <Hero />
+      <Services />
       <WhyChooseFreshLoom />
       <CarpetCleaningSection />
       <UpholsterySection />
