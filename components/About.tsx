@@ -1,6 +1,7 @@
 import { ArrowUpRight, SprayCan } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { siteInfo } from "@/lib/data";
 import Reveal from "./Reveal";
 
 export default function About() {
@@ -30,10 +31,10 @@ export default function About() {
             Trusted Experts In Professional Cleaning Services
           </h2>
           <p className="text-slate-600 mb-4">
-            Freshloom Carpet &amp; Upholstery Cleaning Limited provides professional cleaning
-            services designed to restore cleanliness, freshness, and comfort to homes and
-            businesses. Our experienced team uses advanced equipment and proven techniques to
-            remove dirt, stains, allergens, and unwanted odors from carpets and furniture.
+            {siteInfo.name} provides professional cleaning services designed to restore
+            cleanliness, freshness, and comfort to homes and businesses. Our experienced team
+            uses advanced equipment and proven techniques to remove dirt, stains, allergens, and
+            unwanted odors from carpets and furniture.
           </p>
           <p className="text-slate-600 mb-8">
             We are committed to delivering reliable service, exceptional results, and complete

@@ -24,9 +24,8 @@ export default function Footer() {
               <Image src="/images/logo.png" alt={siteInfo.name} width={190} height={53} />
             </div>
             <p className="text-sm mb-6">
-              Freshloom Carpet &amp; Upholstery Cleaning Limited provides professional cleaning
-              services designed to restore cleanliness, freshness, and comfort to homes and
-              businesses.
+              {siteInfo.name} provides professional cleaning services designed to restore
+              cleanliness, freshness, and comfort to homes and businesses.
             </p>
             <div className="flex gap-3">
               {socials.map(({ icon: Icon, label }) => (
@@ -82,7 +81,7 @@ export default function Footer() {
       <div className="bg-navy-dark border-t border-white/10">
         <div className="container-page py-6 pb-24 sm:pb-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
           <p>
-            Copyright © {new Date().getFullYear()} {siteInfo.legalName}. All Rights Reserved
+            Copyright © {new Date().getFullYear()} {siteInfo.name}. All Rights Reserved
           </p>
           <ul className="flex gap-6">
             <li>

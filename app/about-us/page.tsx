@@ -8,8 +8,7 @@ import { siteInfo } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: `About Us | ${siteInfo.name}`,
-  description:
-    "Freshloom Carpet & Upholstery Cleaning Limited provides professional cleaning services designed to restore cleanliness, freshness, and comfort to homes and businesses across the UK.",
+  description: `${siteInfo.name} provides professional cleaning services designed to restore cleanliness, freshness, and comfort to homes and businesses across the UK.`,
 };
 
 export default function AboutUsPage() {
