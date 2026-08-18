@@ -10,9 +10,9 @@ export default function CtaBanner() {
           Book Your Cleaning Today
         </h2>
         <p className="text-white/80 mb-8">
-          Get professional carpet and upholstery cleaning services across the UK. Contact
-          Freshloom today for a free quote and fast, reliable service. Transform your space into
-          a cleaner, healthier, and fresher environment with our expert cleaning team.
+          Get professional carpet and upholstery cleaning services across the UK. Contact{" "}
+          {siteInfo.name} today for a free quote and fast, reliable service. Transform your space
+          into a cleaner, healthier, and fresher environment with our expert cleaning team.
         </p>
         <a href={siteInfo.phoneHref} className="btn-accent">
           Call us <ArrowUpRight size={18} />

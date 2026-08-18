@@ -100,7 +100,7 @@ export default function AboutHero() {
             <div className="absolute left-1/2 top-[30%] -translate-x-1/2 -translate-y-1/2 w-[95%] h-[53%] rounded-full bg-accent -z-10" />
             <Image
               src="/images/hero-cleaner.png"
-              alt="Freshloom cleaning team"
+              alt="Fresh Loom Carpet Cleaning team"
               width={414}
               height={602}
               className="drop-shadow-2xl w-full h-full object-contain"

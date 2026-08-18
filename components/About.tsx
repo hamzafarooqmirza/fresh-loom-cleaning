@@ -10,7 +10,7 @@ export default function About() {
         <Reveal direction="left" className="relative">
           <Image
             src="/images/services/carpet-cleaning.jpg"
-            alt="About Fresh Loom Cleaning"
+            alt="About Fresh Loom Carpet Cleaning"
             width={1000}
             height={667}
             sizes="(min-width: 1024px) 50vw, 100vw"
