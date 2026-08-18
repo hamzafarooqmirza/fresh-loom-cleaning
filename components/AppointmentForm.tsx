@@ -25,7 +25,7 @@ export default function AppointmentForm() {
     const message = data.get("message") as string;
 
     const lines = [
-      "Hi Fresh Loom Cleaning! I'd like a quote.",
+      `Hi ${siteInfo.name}! I'd like a quote.`,
       `Name: ${name}`,
       `Email: ${email}`,
       phone ? `Phone: ${phone}` : null,

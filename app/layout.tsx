@@ -4,9 +4,11 @@ import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { siteInfo } from "@/lib/data";
 import "./globals.css";
 
 const GTM_ID = "GTM-TNCWZXNX";
+const SITE_URL = "https://freshloomcleaning.co.uk";
 
 const quicksand = Quicksand({
   variable: "--font-quicksand",
@@ -20,10 +22,30 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://freshloomcleaning.co.uk"),
-  title: "Fresh Loom Cleaning | Carpet & Upholstery Cleaning Services",
+  metadataBase: new URL(SITE_URL),
+  title: `${siteInfo.name} | Carpet & Upholstery Cleaning Services`,
   description:
     "Professional carpet, sofa, rug, and upholstery cleaning using advanced equipment to remove stains, dirt, and allergens effectively.",
+};
+
+// NAP (Name, Address, Phone) structured data — kept identical to siteInfo
+// everywhere on the site for local SEO / Google Business Profile consistency.
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: siteInfo.name,
+  legalName: siteInfo.legalName,
+  image: `${SITE_URL}/images/logo.png`,
+  url: SITE_URL,
+  telephone: siteInfo.phone,
+  email: siteInfo.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2/2, 156 Charles St",
+    addressLocality: "Glasgow",
+    postalCode: "G21 2QH",
+    addressCountry: "GB",
+  },
 };
 
 export default function RootLayout({
@@ -36,6 +58,9 @@ export default function RootLayout({
       lang="en"
       className={`${quicksand.variable} ${openSans.variable} h-full antialiased`}
     >
+      <Script id="local-business-schema" type="application/ld+json" strategy="beforeInteractive">
+        {JSON.stringify(localBusinessSchema)}
+      </Script>
       <Script id="gtm" strategy="afterInteractive">
         {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

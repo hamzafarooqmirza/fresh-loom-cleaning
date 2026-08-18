@@ -1,7 +1,7 @@
 export const siteInfo = {
-  name: "Fresh Loom Cleaning",
+  name: "Fresh Loom Carpet Cleaning",
   legalName: "Freshloom Carpet & Upholstery Cleaning Limited",
-  phone: "+44 777 887 9063",
+  phone: "+44 7778 879063",
   phoneHref: "tel:+447778879063",
   email: "freshloomcarpetcleaning@gmail.com",
   address: "2/2, 156 Charles St, Glasgow G21 2QH, United Kingdom",

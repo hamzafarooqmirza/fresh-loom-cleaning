@@ -8,8 +8,9 @@ import Process from "@/components/Process";
 import CtaBanner from "@/components/CtaBanner";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
+import { siteInfo } from "@/lib/data";
 
-const title = "Fresh Loom Cleaning | Carpet & Upholstery Cleaning Services";
+const title = `${siteInfo.name} | Carpet & Upholstery Cleaning Services`;
 const description =
   "Professional carpet, sofa, rug, and upholstery cleaning using advanced equipment to remove stains, dirt, and allergens effectively.";
 

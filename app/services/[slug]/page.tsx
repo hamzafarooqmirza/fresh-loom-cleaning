@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { allServices, serviceDetails, sharedFaqs } from "@/lib/data";
+import { allServices, serviceDetails, sharedFaqs, siteInfo } from "@/lib/data";
 import PhotoHero from "@/components/PhotoHero";
 import ServiceSidebar from "@/components/ServiceSidebar";
 import ServiceDetailContent from "@/components/ServiceDetailContent";
@@ -22,7 +22,7 @@ export async function generateMetadata({
   const service = allServices.find((s) => s.slug === slug);
   if (!service) return {};
   return {
-    title: `${service.title} | Fresh Loom Cleaning`,
+    title: `${service.title} | ${siteInfo.name}`,
     description: service.description,
   };
 }

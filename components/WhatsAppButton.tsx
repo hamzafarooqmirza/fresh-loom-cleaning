@@ -6,7 +6,7 @@ import { siteInfo } from "@/lib/data";
 
 export default function WhatsAppButton() {
   const message = encodeURIComponent(
-    "Hi Fresh Loom Cleaning! I need more info about your cleaning services."
+    `Hi ${siteInfo.name}! I need more info about your cleaning services.`
   );
 
   return (
@@ -25,7 +25,7 @@ export default function WhatsAppButton() {
         <Phone size={16} /> Call Us
       </motion.a>
       <motion.a
-        href={`https://wa.me/447778879063?text=${message}`}
+        href={`https://wa.me/${siteInfo.phoneHref.replace("tel:+", "")}?text=${message}`}
         target="_blank"
         rel="nofollow noopener"
         aria-label="Chat with us on WhatsApp"
