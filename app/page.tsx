@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Services from "@/components/Services";
-import AppointmentSection from "@/components/AppointmentSection";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import Process from "@/components/Process";
-import CtaBanner from "@/components/CtaBanner";
-import Gallery from "@/components/Gallery";
-import Testimonials from "@/components/Testimonials";
+import HomeHero from "@/components/home/HomeHero";
+import TrustBenefits from "@/components/home/TrustBenefits";
+import WhyChooseFreshLoom from "@/components/home/WhyChooseFreshLoom";
+import CarpetCleaningSection from "@/components/home/CarpetCleaningSection";
+import UpholsterySection from "@/components/home/UpholsterySection";
+import StainRemovalSection from "@/components/home/StainRemovalSection";
+import RugCleaningSection from "@/components/home/RugCleaningSection";
+import ProcessTimeline from "@/components/home/ProcessTimeline";
+import BeforeAfterGallery from "@/components/home/BeforeAfterGallery";
+import GlasgowCoverage from "@/components/home/GlasgowCoverage";
+import HomeFaq from "@/components/home/HomeFaq";
+import FinalCta from "@/components/home/FinalCta";
 import { siteInfo } from "@/lib/data";
 
-const title = `${siteInfo.name} | Carpet & Upholstery Cleaning Services`;
+const title = `${siteInfo.name} | Carpet & Upholstery Cleaning in Glasgow`;
 const description =
-  "Professional carpet, sofa, rug, and upholstery cleaning using advanced equipment to remove stains, dirt, and allergens effectively.";
+  "Professional carpet, upholstery, sofa and rug cleaning in Glasgow. Fresh Loom Cleaning removes everyday dirt, stains and odours to leave your home fresher.";
 
 export const metadata: Metadata = {
   title,
@@ -33,15 +36,18 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <Hero />
-      <About />
-      <Services />
-      <AppointmentSection />
-      <WhyChooseUs />
-      <Process />
-      <Gallery />
-      <CtaBanner />
-      <Testimonials />
+      <HomeHero />
+      <TrustBenefits />
+      <WhyChooseFreshLoom />
+      <CarpetCleaningSection />
+      <UpholsterySection />
+      <StainRemovalSection />
+      <RugCleaningSection />
+      <ProcessTimeline />
+      <BeforeAfterGallery />
+      <GlasgowCoverage />
+      <HomeFaq />
+      <FinalCta />
     </>
   );
 }
