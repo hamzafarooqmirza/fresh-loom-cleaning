@@ -63,7 +63,7 @@ export default function ServiceFaq({
         <Reveal direction="right" delay={0.1}>
           <Image
             src={image}
-            alt="Freshloom cleaning team at work"
+            alt="Fresh Loom Carpet Cleaning team at work"
             width={800}
             height={534}
             sizes="(min-width: 1024px) 50vw, 100vw"
