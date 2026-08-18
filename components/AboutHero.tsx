@@ -54,8 +54,7 @@ export default function AboutHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] as const }}
           >
-            For over a decade, {siteInfo.name} has helped homes and businesses across the UK
-            breathe easier &mdash; one deep clean at a time.
+            {`For over a decade, ${siteInfo.name} has helped homes and businesses across the UK breathe easier — one deep clean at a time.`}
           </motion.p>
 
           <motion.div
