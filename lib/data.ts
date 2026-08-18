@@ -12,7 +12,7 @@ export const siteInfo = {
 
 export const aboutPage = {
   intro: [
-    "Freshloom Carpet & Upholstery Cleaning Limited provides professional cleaning services designed to restore cleanliness, freshness, and comfort to homes and businesses. Our experienced team uses advanced equipment and proven techniques to remove dirt, stains, allergens, and unwanted odors from carpets and furniture.",
+    `${siteInfo.name} provides professional cleaning services designed to restore cleanliness, freshness, and comfort to homes and businesses. Our experienced team uses advanced equipment and proven techniques to remove dirt, stains, allergens, and unwanted odors from carpets and furniture.`,
     "We are committed to delivering reliable service, exceptional results, and complete customer satisfaction. With careful attention to detail and safe cleaning methods, we help extend the life of your carpets, rugs, sofas, and upholstery while creating a healthier indoor environment.",
   ],
   vision: {
@@ -28,15 +28,14 @@ export const aboutPage = {
   ukServices: {
     title: "Carpet & Upholstery Cleaning Services In UK",
     paragraphs: [
-      "Freshloom Carpet & Upholstery Cleaning Limited provides expert cleaning services across the UK, specializing in carpets, sofas, rugs, and upholstery. Our professional team uses advanced cleaning equipment and eco-friendly methods to remove deep stains, dirt, allergens, and unpleasant odors, ensuring a healthier and fresher living or working environment.",
+      `${siteInfo.name} provides expert cleaning services across the UK, specializing in carpets, sofas, rugs, and upholstery. Our professional team uses advanced cleaning equipment and eco-friendly methods to remove deep stains, dirt, allergens, and unpleasant odors, ensuring a healthier and fresher living or working environment.`,
       `We are committed to delivering high-quality results with attention to detail and customer satisfaction at the core of our service. Whether you need residential or commercial cleaning, our reliable solutions restore the original beauty of your carpets and furniture while extending their lifespan. Contact ${siteInfo.name} today for trusted, affordable, and professional cleaning across the UK.`,
     ],
   },
 };
 
 export const contactPage = {
-  intro:
-    "Have a question or ready to book your cleaning? Reach out to Freshloom Carpet & Upholstery Cleaning Limited — our team is on hand to help with a fast, friendly response.",
+  intro: `Have a question or ready to book your cleaning? Reach out to ${siteInfo.name} — our team is on hand to help with a fast, friendly response.`,
   cards: [
     { icon: "MapPin", title: "Our Address", lines: [siteInfo.address] },
     { icon: "Phone", title: "Phone Number", lines: [siteInfo.phone] },
