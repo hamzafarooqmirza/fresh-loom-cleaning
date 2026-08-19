@@ -10,7 +10,11 @@ const icons = [Droplets, Sofa, ShieldCheck];
 export default function WhyChooseUs() {
   return (
     <section className="py-16 lg:py-24">
-      <StaggerGroup className="container-page grid md:grid-cols-3 gap-8">
+      <div className="container-page">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-12">
+          Why Choose Fresh Loom Cleaning?
+        </h2>
+        <StaggerGroup className="grid md:grid-cols-3 gap-8">
         {whyChooseUs.map((item, i) => {
           const Icon = icons[i];
           return (
@@ -33,7 +37,8 @@ export default function WhyChooseUs() {
             </StaggerItem>
           );
         })}
-      </StaggerGroup>
+        </StaggerGroup>
+      </div>
     </section>
   );
 }

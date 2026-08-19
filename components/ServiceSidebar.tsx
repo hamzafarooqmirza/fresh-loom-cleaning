@@ -6,7 +6,7 @@ export default function ServiceSidebar({ activeSlug }: { activeSlug: string }) {
   return (
     <aside className="lg:sticky lg:top-28 space-y-6">
       <div className="bg-light rounded-2xl p-6">
-        <h3 className="font-heading font-bold text-navy-dark text-lg mb-4">Our Services</h3>
+        <p className="font-heading font-bold text-navy-dark text-lg mb-4">Our Services</p>
         <ul className="space-y-2">
           {allServices.map((s) => (
             <li key={s.slug}>
@@ -28,7 +28,7 @@ export default function ServiceSidebar({ activeSlug }: { activeSlug: string }) {
 
       <div className="rounded-2xl bg-gradient-to-br from-navy to-navy-dark text-white p-6">
         <p className="text-sm text-white/70 mb-1">Need Any Help?</p>
-        <h3 className="font-heading font-bold text-xl mb-2">Contact Our Team!</h3>
+        <p className="font-heading font-bold text-xl mb-2">Contact Our Team!</p>
         <p className="text-sm text-white/70 mb-5">
           Contact our team for fast, reliable cleaning service support today.
         </p>
