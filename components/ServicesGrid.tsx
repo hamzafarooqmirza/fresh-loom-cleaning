@@ -11,6 +11,9 @@ export default function ServicesGrid() {
   return (
     <section className="py-16 lg:py-24">
       <div className="container-page">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-12">
+          Our Core Cleaning Services
+        </h2>
         <StaggerGroup className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
             <StaggerItem key={service.slug}>

@@ -42,7 +42,7 @@ export default function ServiceDetailContent({
         Call Us <ArrowUpRight size={18} />
       </a>
 
-      <h3 className="text-xl font-bold text-navy-dark mb-4">What&rsquo;s Included</h3>
+      <h2 className="text-xl font-bold text-navy-dark mb-4">What&rsquo;s Included</h2>
       <div className="grid sm:grid-cols-2 gap-x-8 gap-y-2 border-t border-black/10 pt-4">
         {[included.slice(0, half), included.slice(half)].map((column, i) => (
           <ul key={i} className="space-y-2">

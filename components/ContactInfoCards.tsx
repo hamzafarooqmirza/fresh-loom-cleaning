@@ -10,7 +10,11 @@ const iconMap: Record<string, LucideIcon> = { MapPin, Phone, Mail, Clock };
 export default function ContactInfoCards() {
   return (
     <section className="py-16">
-      <StaggerGroup className="container-page grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="container-page">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-10 text-center">
+          Our Contact Details
+        </h2>
+        <StaggerGroup className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {contactPage.cards.map((card) => {
           const Icon = iconMap[card.icon];
           return (
@@ -33,7 +37,8 @@ export default function ContactInfoCards() {
             </StaggerItem>
           );
         })}
-      </StaggerGroup>
+        </StaggerGroup>
+      </div>
     </section>
   );
 }
