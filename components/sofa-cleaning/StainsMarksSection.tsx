@@ -5,14 +5,14 @@ import Reveal from "../Reveal";
 import { StaggerGroup, StaggerItem } from "../Stagger";
 
 const problems = [
-  { label: "Drink Spills", icon: CupSoda },
-  { label: "Food Marks", icon: Utensils },
+  { label: "Coffee & Tea", icon: CupSoda },
+  { label: "Food Spills", icon: Utensils },
   { label: "Pet Marks", icon: PawPrint },
-  { label: "Armrest Build-Up", icon: Hand },
-  { label: "Seat Cushions", icon: Sofa },
-  { label: "Everyday Grime", icon: Wind },
+  { label: "Mud", icon: Hand },
+  { label: "Seat Marks", icon: Sofa },
+  { label: "Everyday Accidents", icon: Wind },
   { label: "Greasy Marks", icon: Droplet },
-  { label: "General Spills", icon: Droplets },
+  { label: "Drink Spills", icon: Droplets },
 ];
 
 export default function StainsMarksSection() {
@@ -21,18 +21,15 @@ export default function StainsMarksSection() {
       <div className="container-page grid lg:grid-cols-2 gap-12 items-center mb-14">
         <Reveal direction="left">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-            Extra Attention for Spills, Marks &amp; Used Areas
+            Focused Care for Sofa Stains &amp; Spills
           </h2>
           <div className="space-y-4 text-white/70 mb-6">
-            <p>Furniture does not always become dirty evenly.</p>
+            <p>A small spill can quickly become the first thing you notice whenever you look at your sofa.</p>
             <p>
-              A drink may spill on one cushion while the rest of the sofa remains clean. Armrests
-              may show more wear than the back of a chair. A favourite seat may simply need more
-              attention because it is used every day.
+              Different substances behave differently on fabric. Coffee may soak into fibres differently from grease, food or pet-related marks, and previous DIY products can also affect how a stain responds.
             </p>
             <p>
-              During professional upholstery cleaning, these problem areas can be identified and
-              treated individually where appropriate.
+              Our sofa stain cleaning approach considers the mark as well as the surrounding fabric before treatment begins. Where suitable, targeted sofa stain treatment can be used alongside the main cleaning process.
             </p>
             <p>
               The way a mark responds depends on several factors, including what caused it, the
@@ -51,14 +48,14 @@ export default function StainsMarksSection() {
             upholstery has been assessed.
           </p>
           <Link href="/contact-us" className="btn-accent">
-            Ask About a Furniture Stain <ArrowUpRight size={18} />
+            Ask About a Sofa Stain <ArrowUpRight size={18} />
           </Link>
         </Reveal>
 
         <Reveal direction="right" delay={0.1}>
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/upholstery-cleaning.jpg"
+              src="/images/services/sofa-cleaning.jpg"
               alt="Professional treatment of a mark on fabric upholstery"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
