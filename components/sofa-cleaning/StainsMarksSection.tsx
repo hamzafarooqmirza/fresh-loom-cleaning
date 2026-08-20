@@ -55,7 +55,7 @@ export default function StainsMarksSection() {
         <Reveal direction="right" delay={0.1}>
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/sofa-cleaning.jpg"
+              src="/images/services/stain-removal.jpg"
               alt="Professional treatment of a mark on fabric upholstery"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
