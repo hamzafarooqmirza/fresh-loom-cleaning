@@ -11,10 +11,9 @@ import ServiceFaq from "@/components/ServiceFaq";
 import UkServicesBlurb from "@/components/UkServicesBlurb";
 import CtaBanner from "@/components/CtaBanner";
 
-// "carpet-cleaning" and "upholstery-cleaning" have their own dedicated
-// routes (app/services/carpet-cleaning, app/services/upholstery-cleaning),
+// Carpet, upholstery and sofa cleaning have their own dedicated service routes,
 // so they're excluded here to avoid two routes resolving to the same path.
-const DEDICATED_SLUGS = ["carpet-cleaning", "upholstery-cleaning"];
+const DEDICATED_SLUGS = ["carpet-cleaning", "upholstery-cleaning", "sofa-cleaning"];
 
 export function generateStaticParams() {
   return allServices
