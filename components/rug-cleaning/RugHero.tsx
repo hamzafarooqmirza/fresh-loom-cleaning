@@ -1,44 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Phone, Sofa, Target, Layers3, Building2 } from "lucide-react";
+import { ArrowUpRight, Phone, Waves, Target, Layers3, ClipboardCheck } from "lucide-react";
 import { siteInfo } from "@/lib/data";
 
 const trustPoints = [
-  { icon: Sofa, label: "Fabric-Focused Cleaning" },
-  { icon: Target, label: "Stain Treatment" },
-  { icon: Layers3, label: "Different Upholstery Types" },
-  { icon: Building2, label: "Home & Commercial Furniture" },
+  { icon: Waves, label: "Material-Aware Cleaning" },
+  { icon: Target, label: "Stain-Focused Care" },
+  { icon: Layers3, label: "Wool Rug Cleaning" },
+  { icon: ClipboardCheck, label: "Careful Rug Assessment" },
 ];
 
-export default function UpholsteryHero() {
+export default function RugHero() {
   return (
     <section className="relative overflow-hidden bg-cream">
       <div className="container-page grid lg:grid-cols-2 gap-12 items-center py-16 lg:py-24">
         <div>
           <span className="eyebrow mb-4 animate-fade-up">
-            <Sofa size={16} /> Professional Upholstery Care
+            <Waves size={16} /> Specialist Rug Care
           </span>
           <h1
             className="text-4xl md:text-5xl font-bold text-navy-dark leading-tight mb-6 animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
-            Professional Upholstery Cleaning for Fresher, Cleaner Furniture
+            Professional Rug Cleaning with Care for Every Fibre
           </h1>
           <div
             className="space-y-4 text-slate-600 text-lg mb-8 max-w-xl animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
             <p>
-              Your upholstered furniture is part of everyday life. Sofas, armchairs and dining
-              chairs regularly come into contact with dust, spills, food, pets and general
-              household use, so the fabric can gradually lose its fresh appearance.
+              Rugs bring warmth, colour and character to a room, but everyday use also exposes
+              them to dust, foot traffic, spills and dirt that can settle between the fibres.
             </p>
             <p>
-              {`${siteInfo.name} provides professional upholstery cleaning for fabric furniture that needs more attention than routine surface cleaning can provide.`}
+              {`${siteInfo.name} provides professional rug cleaning with an approach based on the rug's material, construction and current condition.`}
             </p>
             <p>
-              We look at the upholstery material and its condition before deciding how it should
-              be treated, helping us provide careful cleaning for the furniture you use every day.
+              From everyday area rugs to wool rugs that require more careful handling, we look at
+              what is being cleaned before deciding on an appropriate treatment.
             </p>
           </div>
           <div className="flex flex-wrap gap-4 mb-8 animate-fade-up" style={{ animationDelay: "0.3s" }}>
@@ -64,8 +63,8 @@ export default function UpholsteryHero() {
 
         <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
           <Image
-            src="/images/services/sofa-cleaning.jpg"
-            alt="Professional technician cleaning a fabric sofa with upholstery extraction equipment"
+            src="/images/services/rug-cleaning.jpg"
+            alt="Professional technician carefully cleaning a large area rug"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"

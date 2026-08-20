@@ -24,10 +24,7 @@ export default function UpholsteryFinalCta() {
           Give Your Upholstery the Care It Deserves
         </h2>
         <p className="text-white/80 mb-8">
-          From well-used sofas and armchairs to dining chairs and other fabric furniture,{" "}
-          {siteInfo.name} provides professional upholstery care based on the material and
-          condition of each item. Tell us what you would like cleaned and we can discuss the most
-          suitable next step.
+          {`From well-used sofas and armchairs to dining chairs and other fabric furniture, ${siteInfo.name} provides professional upholstery care based on the material and condition of each item. Tell us what you would like cleaned and we can discuss the most suitable next step.`}
         </p>
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           <Link href="/contact-us" className="btn-accent">

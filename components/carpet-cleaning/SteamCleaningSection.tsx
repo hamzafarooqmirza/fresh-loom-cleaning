@@ -41,8 +41,7 @@ export default function SteamCleaningSection() {
               treatment.
             </p>
             <p>
-              If you are unsure which approach your carpet needs, {siteInfo.name} can assess it
-              before cleaning begins.
+              {`If you are unsure which approach your carpet needs, ${siteInfo.name} can assess it before cleaning begins.`}
             </p>
           </div>
 

@@ -11,10 +11,10 @@ import ServiceFaq from "@/components/ServiceFaq";
 import UkServicesBlurb from "@/components/UkServicesBlurb";
 import CtaBanner from "@/components/CtaBanner";
 
-// "carpet-cleaning" and "upholstery-cleaning" have their own dedicated
-// routes (app/services/carpet-cleaning, app/services/upholstery-cleaning),
-// so they're excluded here to avoid two routes resolving to the same path.
-const DEDICATED_SLUGS = ["carpet-cleaning", "upholstery-cleaning"];
+// "carpet-cleaning", "upholstery-cleaning" and "rug-cleaning" have their
+// own dedicated routes (app/services/<slug>), so they're excluded here
+// to avoid two routes resolving to the same path.
+const DEDICATED_SLUGS = ["carpet-cleaning", "upholstery-cleaning", "rug-cleaning"];
 
 export function generateStaticParams() {
   return allServices
