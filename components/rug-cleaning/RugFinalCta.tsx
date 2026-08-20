@@ -4,12 +4,12 @@ import { ArrowUpRight, MapPin, Phone } from "lucide-react";
 import { siteInfo } from "@/lib/data";
 import Reveal from "../Reveal";
 
-export default function CarpetFinalCta() {
+export default function RugFinalCta() {
   return (
     <section className="relative overflow-hidden bg-navy-dark py-20 lg:py-28">
       <Image
-        src="/images/gallery/carpet-cleaning.png"
-        alt="Freshly cleaned carpet in a residential interior"
+        src="/images/services/rug-cleaning.jpg"
+        alt="Freshly cleaned area rug in a residential interior"
         fill
         sizes="100vw"
         className="object-cover"
@@ -18,13 +18,13 @@ export default function CarpetFinalCta() {
 
       <Reveal className="container-page relative text-center max-w-2xl mx-auto">
         <span className="text-xs font-bold uppercase tracking-wide text-accent mb-3 block">
-          Need Your Carpets Cleaned?
+          Does Your Rug Need a Fresher Start?
         </span>
         <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-          Give Your Carpets the Professional Clean They Need
+          Give Your Rug the Professional Care It Needs
         </h2>
         <p className="text-white/80 mb-8">
-          {`Whether your carpets need routine maintenance, a deeper clean or attention to stubborn marks, speak to ${siteInfo.name} about the right approach for your home or property. Tell us what needs cleaning and we can discuss the next step.`}
+          {`From well-used area rugs to wool rugs and individual stains, ${siteInfo.name} provides professional rug care based on the material and condition of the item. Tell us about your rug and what you would like help with, and we can discuss the most appropriate next step.`}
         </p>
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           <Link href="/contact-us" className="btn-accent">

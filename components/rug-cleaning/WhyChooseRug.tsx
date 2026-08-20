@@ -9,46 +9,46 @@ import { StaggerGroup, StaggerItem } from "../Stagger";
 const features = [
   {
     icon: ClipboardCheck,
-    title: "Furniture Assessment",
-    description: "We consider the upholstery and visible problem areas before deciding on the cleaning approach.",
+    title: "Individual Rug Assessment",
+    description: "We consider the rug and its current condition before deciding how to approach the job.",
     span: "md:col-span-2",
   },
   {
     icon: Layers3,
-    title: "Fabric-Aware Approach",
-    description: "Cleaning decisions are based on the material rather than automatically treating every sofa or chair the same way.",
+    title: "Material-Aware Cleaning",
+    description: "Different fibres can require different care, so the material forms part of the cleaning decision.",
     span: "",
   },
   {
     icon: Target,
-    title: "Attention to Used Areas",
-    description: "Frequently touched areas and individual marks can receive additional attention where appropriate.",
+    title: "Attention to Problem Areas",
+    description: "Visible spots and heavily used sections can receive focused attention where appropriate.",
     span: "",
   },
   {
     icon: MessageCircle,
-    title: "Realistic Expectations",
-    description: "We explain what professional cleaning is intended to improve without promising impossible results.",
+    title: "Honest Expectations",
+    description: "We explain what professional cleaning is intended to improve without guaranteeing impossible results.",
     span: "",
   },
   {
     icon: Award,
-    title: "Professional Furniture Care",
-    description: "Our approach to professional furniture cleaning focuses on careful work and straightforward communication from enquiry to completion.",
+    title: "Professional Care",
+    description: "Our approach focuses on careful work, sensible cleaning decisions and clear communication throughout the service.",
     span: "md:col-span-2",
   },
 ];
 
-export default function WhyChooseUpholstery() {
+export default function WhyChooseRug() {
   return (
     <section className="py-16 lg:py-24 bg-light">
       <div className="container-page">
         <Reveal className="max-w-2xl mb-14">
           <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-4">
-            Furniture Care That Starts With the Fabric
+            Rug Care That Begins with Understanding the Material
           </h2>
           <p className="text-slate-600">
-            {`A good upholstery cleaner should understand that furniture is not simply another surface to wash. Fabric, construction, usage and condition all influence how an upholstered item should be approached. ${siteInfo.name} focuses on understanding those factors before the main cleaning work begins.`}
+            {`Rugs can differ significantly, even when they look similar at first glance. ${siteInfo.name} takes a considered approach by looking at the rug, identifying visible problems and considering the material before the main treatment begins. Our goal is straightforward: provide careful, professional cleaning without making promises that cannot be made before the rug has been assessed.`}
           </p>
         </Reveal>
 

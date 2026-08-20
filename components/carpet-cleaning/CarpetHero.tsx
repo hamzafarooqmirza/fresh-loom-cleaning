@@ -34,9 +34,7 @@ export default function CarpetHero() {
               vacuuming cannot always reach.
             </p>
             <p>
-              {siteInfo.name} provides a professional carpet cleaning service designed to lift
-              built-up dirt, treat troublesome marks and leave your carpets looking and feeling
-              noticeably fresher.
+              {`${siteInfo.name} provides a professional carpet cleaning service designed to lift built-up dirt, treat troublesome marks and leave your carpets looking and feeling noticeably fresher.`}
             </p>
             <p>
               Whether you need routine carpet cleaning or help with a heavily used carpet, we
