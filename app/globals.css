@@ -9,6 +9,13 @@
   --brand-accent-dark: #d94502;
   --brand-light: #f6f6f2;
   --brand-cream: #fdf0e7;
+  /*
+   * Keep production builds independent of Google Fonts. These local system
+   * stacks preserve the rounded-heading and highly legible body-font intent
+   * without requiring a network request during `next build`.
+   */
+  --font-open-sans: "Segoe UI", Arial, Helvetica, sans-serif;
+  --font-quicksand: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
 }
 
 @theme inline {
@@ -27,6 +34,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-body);
 }
 
 h1,
