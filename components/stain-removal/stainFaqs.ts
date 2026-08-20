@@ -1,0 +1,14 @@
+export const stainFaqs = [
+  { q: "Can professional stain removal get rid of every stain?", a: "No responsible stain removal specialist should guarantee that every mark can be removed completely. Results depend on the substance, material, age of the stain and previous treatment." },
+  { q: "How does professional stain treatment work?", a: "Professional stain treatment starts by considering what caused the mark and what material has been affected. Suitable treatment can then be selected for the specific situation." },
+  { q: "Can you remove coffee stains?", a: "Coffee stain removal can be possible on many suitable carpets and fabrics. The result depends on the material, age of the spill and anything previously used on it." },
+  { q: "Can red wine stains be professionally treated?", a: "Yes, red wine stain removal can be attempted using professional treatment appropriate for the affected material. Complete removal cannot be guaranteed before assessment." },
+  { q: "Can you treat grease stains?", a: "Grease stain removal requires consideration of the oily nature of the mark as well as the surface it has affected." },
+  { q: "Do you provide blood stain removal?", a: "Suitable surfaces can be assessed for blood stain removal. Protein-based stains need to be approached differently from many ordinary drink or food marks." },
+  { q: "Can you remove curry or turmeric stains?", a: "Both curry and turmeric contain strong pigments. Curry stain removal and turmeric stain removal may improve the affected area, but the final result depends heavily on the material and how the stain has reacted with it." },
+  { q: "Can you treat ink stains?", a: "Ink stain removal can be challenging because some inks can spread or affect colour. We assess the material and mark before deciding on treatment." },
+  { q: "Can chocolate stains be removed?", a: "Professional chocolate stain removal can target the combination of oils, sugars and colour left by chocolate on suitable materials." },
+  { q: "Do you provide mustard stain removal?", a: "Yes, suitable materials can be assessed for mustard stain removal. Strong food pigments can sometimes permanently affect light-coloured fibres, so results vary." },
+  { q: "Should I try household stain remover before calling you?", a: "For simple spills, following the material manufacturer's care instructions may be appropriate. With difficult stains or delicate materials, repeatedly applying different products can make professional treatment more complicated. Avoid aggressive rubbing or mixing cleaning chemicals." },
+  { q: "What information should I give you about the stain?", a: "If possible, tell us what caused it, when it happened, what material is affected and what products have already been used. A clear photograph can also help us understand the problem before an appointment." },
+];

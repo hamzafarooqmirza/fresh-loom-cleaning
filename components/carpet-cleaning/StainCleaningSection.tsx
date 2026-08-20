@@ -54,7 +54,7 @@ export default function StainCleaningSection() {
         <Reveal direction="right" delay={0.1}>
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/stain-removal.jpg"
+              src="/images/services/carpet-cleaning.jpg"
               alt="Carpet stain treatment by a professional cleaner"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
