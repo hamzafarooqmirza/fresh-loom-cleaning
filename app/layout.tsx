@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Quicksand, Open_Sans } from "next/font/google";
 import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,17 +8,6 @@ import { SITE_URL, BUSINESS_ID } from "@/lib/seo";
 import "./globals.css";
 
 const GTM_ID = "GTM-TNCWZXNX";
-
-const quicksand = Quicksand({
-  variable: "--font-quicksand",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-});
-
-const openSans = Open_Sans({
-  variable: "--font-open-sans",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -75,10 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${quicksand.variable} ${openSans.variable} h-full antialiased`}
-    >
+    <html lang="en" className="h-full antialiased">
       <Script id="local-business-schema" type="application/ld+json" strategy="beforeInteractive">
         {JSON.stringify(localBusinessSchema)}
       </Script>
