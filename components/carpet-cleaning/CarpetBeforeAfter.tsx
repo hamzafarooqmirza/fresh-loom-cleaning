@@ -4,7 +4,7 @@ import { StaggerGroup, StaggerItem } from "../Stagger";
 
 const results = [
   { title: "Everyday Dirt & Build-Up", image: "/images/gallery/carpet-cleaning.png" },
-  { title: "Treated Marks", image: "/images/gallery/stain-removal.png" },
+  { title: "Treated Marks", image: "/images/gallery/carpet-cleaning.png" },
 ];
 
 export default function CarpetBeforeAfter() {
