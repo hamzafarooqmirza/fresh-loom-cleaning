@@ -11,9 +11,14 @@ import ServiceFaq from "@/components/ServiceFaq";
 import UkServicesBlurb from "@/components/UkServicesBlurb";
 import CtaBanner from "@/components/CtaBanner";
 
-// Carpet, upholstery and sofa cleaning have their own dedicated service routes,
-// so they're excluded here to avoid two routes resolving to the same path.
-const DEDICATED_SLUGS = ["carpet-cleaning", "upholstery-cleaning", "sofa-cleaning"];
+// These services have dedicated routes at app/services/<slug>/page.tsx. Keep
+// them out of the generic route so Next.js never has two pages for one URL.
+const DEDICATED_SLUGS = [
+  "carpet-cleaning",
+  "upholstery-cleaning",
+  "rug-cleaning",
+  "sofa-cleaning",
+];
 
 export function generateStaticParams() {
   return allServices
