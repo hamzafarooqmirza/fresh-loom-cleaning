@@ -11,11 +11,15 @@ import ServiceFaq from "@/components/ServiceFaq";
 import UkServicesBlurb from "@/components/UkServicesBlurb";
 import CtaBanner from "@/components/CtaBanner";
 
-// "carpet-cleaning" has its own dedicated route at
-// app/services/carpet-cleaning/page.tsx, so it's excluded here to
-// avoid two routes resolving to the same path.
+// "carpet-cleaning" and "upholstery-cleaning" have their own dedicated
+// routes (app/services/carpet-cleaning, app/services/upholstery-cleaning),
+// so they're excluded here to avoid two routes resolving to the same path.
+const DEDICATED_SLUGS = ["carpet-cleaning", "upholstery-cleaning"];
+
 export function generateStaticParams() {
-  return allServices.filter((s) => s.slug !== "carpet-cleaning").map((s) => ({ slug: s.slug }));
+  return allServices
+    .filter((s) => !DEDICATED_SLUGS.includes(s.slug))
+    .map((s) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({
@@ -41,7 +45,7 @@ export default async function ServiceDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  if (slug === "carpet-cleaning") notFound();
+  if (DEDICATED_SLUGS.includes(slug)) notFound();
   const service = allServices.find((s) => s.slug === slug);
   const detail = serviceDetails[slug];
   if (!service || !detail) notFound();
