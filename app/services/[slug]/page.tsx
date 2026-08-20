@@ -11,8 +11,11 @@ import ServiceFaq from "@/components/ServiceFaq";
 import UkServicesBlurb from "@/components/UkServicesBlurb";
 import CtaBanner from "@/components/CtaBanner";
 
+// "carpet-cleaning" has its own dedicated route at
+// app/services/carpet-cleaning/page.tsx, so it's excluded here to
+// avoid two routes resolving to the same path.
 export function generateStaticParams() {
-  return allServices.map((s) => ({ slug: s.slug }));
+  return allServices.filter((s) => s.slug !== "carpet-cleaning").map((s) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({
@@ -38,6 +41,7 @@ export default async function ServiceDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  if (slug === "carpet-cleaning") notFound();
   const service = allServices.find((s) => s.slug === slug);
   const detail = serviceDetails[slug];
   if (!service || !detail) notFound();
