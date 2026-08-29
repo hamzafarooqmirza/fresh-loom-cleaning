@@ -6,14 +6,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, ChevronDown, Search } from "lucide-react";
-import { allServices, navLinks, siteInfo } from "@/lib/data";
+import { allServices, navLinks, serviceAreas, siteInfo } from "@/lib/data";
 import TopBar from "./TopBar";
 import ServicesMegaMenu from "./ServicesMegaMenu";
+import ServiceAreasMenu from "./ServiceAreasMenu";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [servicesHover, setServicesHover] = useState(false);
+  const [areasHover, setAreasHover] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileAreasOpen, setMobileAreasOpen] = useState(false);
   const pathname = usePathname();
 
   function isActive(href: string) {
@@ -66,6 +69,21 @@ export default function Header() {
               </Link>
             )
           )}
+
+          <div
+            className="relative"
+            onMouseEnter={() => setAreasHover(true)}
+            onMouseLeave={() => setAreasHover(false)}
+          >
+            <button
+              className="flex items-center gap-1 font-heading font-semibold text-sm uppercase tracking-wide text-navy-dark hover:text-accent transition-colors py-2"
+            >
+              Service Areas <ChevronDown size={14} />
+            </button>
+            <AnimatePresence>
+              {areasHover && <ServiceAreasMenu />}
+            </AnimatePresence>
+          </div>
         </nav>
 
         <div className="hidden lg:flex items-center gap-6">
@@ -149,6 +167,44 @@ export default function Header() {
                   </Link>
                 )
               )}
+
+              <div>
+                <button
+                  onClick={() => setMobileAreasOpen((v) => !v)}
+                  className="w-full flex items-center justify-between py-2 font-heading font-semibold text-sm uppercase tracking-wide text-navy-dark"
+                >
+                  Service Areas
+                  <motion.span
+                    animate={{ rotate: mobileAreasOpen ? 180 : 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <ChevronDown size={16} />
+                  </motion.span>
+                </button>
+                <AnimatePresence>
+                  {mobileAreasOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="overflow-hidden pl-3"
+                    >
+                      {serviceAreas.map((area) => (
+                        <Link
+                          key={area.name}
+                          href={area.href}
+                          onClick={() => setOpen(false)}
+                          className="block py-2 text-sm text-navy-dark hover:text-accent"
+                        >
+                          {area.name}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
               <Link href="/contact-us" onClick={() => setOpen(false)} className="btn-navy mt-2 justify-center">
                 Get a Quote
               </Link>
