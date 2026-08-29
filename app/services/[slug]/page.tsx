@@ -11,10 +11,26 @@ import ServiceFaq from "@/components/ServiceFaq";
 import UkServicesBlurb from "@/components/UkServicesBlurb";
 import CtaBanner from "@/components/CtaBanner";
 
-// "carpet-cleaning", "upholstery-cleaning" and "rug-cleaning" have their
-// own dedicated routes (app/services/<slug>), so they're excluded here
-// to avoid two routes resolving to the same path.
-const DEDICATED_SLUGS = ["carpet-cleaning", "upholstery-cleaning", "rug-cleaning"];
+// Every service now has its own dedicated route (app/services/<slug>),
+// so this dynamic template has no active slugs left to render. It's
+// kept in place only as a safety net for a future service added to
+// lib/data.ts without a bespoke page yet. Without this exclusion list,
+// generateStaticParams would ask Next.js to pre-render the same paths
+// as the dedicated static routes, which is ambiguous and wasteful even
+// though the static route always wins at request time.
+const DEDICATED_SLUGS = [
+  "carpet-cleaning",
+  "upholstery-cleaning",
+  "rug-cleaning",
+  "sofa-cleaning",
+  "stain-removal",
+  "odour-removal",
+  "curtain-cleaning",
+  "leather-cleaning",
+  "mattress-cleaning",
+  "pet-stain-removal",
+  "end-of-tenancy-deep-clean",
+];
 
 export function generateStaticParams() {
   return allServices
