@@ -51,6 +51,17 @@ export const navLinks = [
   { label: "Contact Us", href: "/contact-us" },
 ];
 
+// Glasgow is the homepage itself (siteInfo.address / the existing
+// Glasgow-focused content) rather than a dedicated /areas page.
+export const serviceAreas = [
+  { name: "Glasgow", slug: "", href: "/" },
+  { name: "Edinburgh", slug: "edinburgh", href: "/areas/edinburgh" },
+  { name: "Stirling", slug: "stirling", href: "/areas/stirling" },
+  { name: "Perth", slug: "perth", href: "/areas/perth" },
+  { name: "Dundee", slug: "dundee", href: "/areas/dundee" },
+  { name: "Dunfermline", slug: "dunfermline", href: "/areas/dunfermline" },
+];
+
 export const services = [
   {
     slug: "carpet-cleaning",

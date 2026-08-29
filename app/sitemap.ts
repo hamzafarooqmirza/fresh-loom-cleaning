@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { allServices } from "@/lib/data";
+import { allServices, serviceAreas } from "@/lib/data";
 import { SITE_URL } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -17,5 +17,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...serviceRoutes];
+  const areaRoutes = serviceAreas
+    .filter((area) => area.slug !== "")
+    .map((area) => ({
+      url: `${SITE_URL}${area.href}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }));
+
+  return [...staticRoutes, ...serviceRoutes, ...areaRoutes];
 }
