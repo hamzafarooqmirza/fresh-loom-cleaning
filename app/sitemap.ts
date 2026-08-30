@@ -10,6 +10,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "" ? 1 : 0.8,
   }));
 
+  const legalRoutes = ["/privacy-policy", "/terms-and-conditions"].map((path) => ({
+    url: `${SITE_URL}${path}`,
+    lastModified: new Date(),
+    changeFrequency: "yearly" as const,
+    priority: 0.3,
+  }));
+
   const serviceRoutes = allServices.map((service) => ({
     url: `${SITE_URL}/services/${service.slug}`,
     lastModified: new Date(),
@@ -26,5 +33,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }));
 
-  return [...staticRoutes, ...serviceRoutes, ...areaRoutes];
+  return [...staticRoutes, ...serviceRoutes, ...areaRoutes, ...legalRoutes];
 }
