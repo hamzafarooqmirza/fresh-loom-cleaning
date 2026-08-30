@@ -95,9 +95,9 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-accent transition-colors">
+              <Link href="/cookies-policy" className="hover:text-accent transition-colors">
                 Cookies Policy
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
