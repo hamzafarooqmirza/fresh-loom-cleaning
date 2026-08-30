@@ -27,8 +27,8 @@ export default function ServiceAreasMenu() {
           ))}
         </div>
 
-        <div className="flex items-center justify-between gap-4 bg-navy-dark px-6 py-4">
-          <p className="text-sm text-white/70">
+        <div className="flex flex-col items-start gap-3 bg-navy-dark px-6 py-4">
+          <p className="text-sm text-white/70 whitespace-nowrap">
             Call{" "}
             <a href={siteInfo.phoneHref} className="text-accent font-semibold">
               {siteInfo.phone}
@@ -36,7 +36,7 @@ export default function ServiceAreasMenu() {
           </p>
           <Link
             href="/contact-us"
-            className="inline-flex items-center gap-1 text-sm font-heading font-semibold uppercase tracking-wide text-accent hover:text-white transition-colors shrink-0"
+            className="inline-flex items-center gap-1 text-sm font-heading font-semibold uppercase tracking-wide text-accent hover:text-white transition-colors"
           >
             Get a Quote <ArrowUpRight size={14} />
           </Link>
