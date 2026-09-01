@@ -3,8 +3,9 @@ import LocationPage from "@/components/areas/LocationPage";
 import { dundee } from "@/lib/areas/dundee";
 
 export const metadata: Metadata = {
-  title: dundee.metaTitle,
-  description: dundee.metaDescription,
+  title: "Expert Carpet Cleaning in Dundee That Delivers Results",
+  description:
+    "Experience deep cleaning for your carpets in Dundee. Book your appointment for a cleaner home now!",
   alternates: {
     canonical: "/areas/dundee",
   },

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { siteInfo } from "@/lib/data";
 import { SITE_URL, BUSINESS_ID, breadcrumbSchema } from "@/lib/seo";
 import { odourFaqs } from "@/components/odour-removal/odourFaqs";
 import OdourHero from "@/components/odour-removal/OdourHero";
@@ -16,9 +15,8 @@ import OdourProjectGallery from "@/components/odour-removal/OdourProjectGallery"
 import OdourFaq from "@/components/odour-removal/OdourFaq";
 import OdourFinalCta from "@/components/odour-removal/OdourFinalCta";
 
-const title = `Professional Odour Removal | ${siteInfo.name}`;
 const description = "Professional odour removal for suitable carpets, rugs, sofas and upholstery, with source-focused treatment and realistic expectations.";
-export const metadata: Metadata = { title, description, alternates: { canonical: "/services/odour-removal" } };
+export const metadata: Metadata = { title: "Say Goodbye to Odours With Expert Removal Services", description: "Breathe easy! Professional odour removal gets rid of unwanted smells. Reach out for an assessment today.", alternates: { canonical: "/services/odour-removal" } };
 const serviceSchema = { "@context": "https://schema.org", "@type": "Service", name: "Professional Odour Removal", description, url: `${SITE_URL}/services/odour-removal`, serviceType: "Odour Removal", provider: { "@id": BUSINESS_ID } };
 const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: odourFaqs.map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) };
 const breadcrumbs = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "Odour Removal", path: "/services/odour-removal" }]);

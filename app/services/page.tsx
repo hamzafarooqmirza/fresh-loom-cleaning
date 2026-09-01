@@ -11,8 +11,9 @@ import { SITE_URL, breadcrumbSchema } from "@/lib/seo";
 const description = `Professional carpet, upholstery, rug, and sofa cleaning, plus stain removal, odour removal, and more across the UK. Book expert cleaning with ${siteInfo.name}.`;
 
 export const metadata: Metadata = {
-  title: `Our Services | ${siteInfo.name}`,
-  description,
+  title: "Expert Cleaning Services in Glasgow",
+  description:
+    "Looking for top-notch cleaning in Glasgow? Trust our team for exceptional results. Get in touch today!",
   alternates: {
     canonical: "/services",
   },

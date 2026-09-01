@@ -3,8 +3,9 @@ import LocationPage from "@/components/areas/LocationPage";
 import { stirling } from "@/lib/areas/stirling";
 
 export const metadata: Metadata = {
-  title: stirling.metaTitle,
-  description: stirling.metaDescription,
+  title: "Stirling's Premier Carpet Cleaning for a Fresh Home",
+  description:
+    "Experience top-notch carpet cleaning in Stirling. Book your appointment today for a fresh, clean home!",
   alternates: {
     canonical: "/areas/stirling",
   },

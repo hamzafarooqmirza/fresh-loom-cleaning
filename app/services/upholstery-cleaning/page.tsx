@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { siteInfo } from "@/lib/data";
 import { SITE_URL, BUSINESS_ID, breadcrumbSchema } from "@/lib/seo";
 import { upholsteryFaqs } from "@/components/upholstery-cleaning/upholsteryFaqs";
 import UpholsteryHero from "@/components/upholstery-cleaning/UpholsteryHero";
@@ -16,13 +15,13 @@ import UpholsteryBeforeAfter from "@/components/upholstery-cleaning/UpholsteryBe
 import UpholsteryFaq from "@/components/upholstery-cleaning/UpholsteryFaq";
 import UpholsteryFinalCta from "@/components/upholstery-cleaning/UpholsteryFinalCta";
 
-const title = `Professional Upholstery Cleaning | ${siteInfo.name}`;
 const description =
   "Professional upholstery cleaning for sofas, armchairs and fabric furniture — fabric-aware deep cleaning, stain treatment and furniture care based on material and condition.";
 
 export const metadata: Metadata = {
-  title,
-  description,
+  title: "Restore Your Upholstery with Top Cleaning Solutions",
+  description:
+    "Tired of dull furniture? Professional upholstery cleaning brings new life. Contact us for a consultation!",
   alternates: {
     canonical: "/services/upholstery-cleaning",
   },

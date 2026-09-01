@@ -3,8 +3,9 @@ import LocationPage from "@/components/areas/LocationPage";
 import { dunfermline } from "@/lib/areas/dunfermline";
 
 export const metadata: Metadata = {
-  title: dunfermline.metaTitle,
-  description: dunfermline.metaDescription,
+  title: "Revive Your Carpets: Dunfermline Cleaning Solutions",
+  description:
+    "Need carpet cleaning in Dunfermline? We deliver exceptional results and customer satisfaction. Call us now!",
   alternates: {
     canonical: "/areas/dunfermline",
   },
