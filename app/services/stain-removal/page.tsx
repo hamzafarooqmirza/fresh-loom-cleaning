@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { siteInfo } from "@/lib/data";
 import { SITE_URL, BUSINESS_ID, breadcrumbSchema } from "@/lib/seo";
 import { stainFaqs } from "@/components/stain-removal/stainFaqs";
 import StainHero from "@/components/stain-removal/StainHero";
@@ -16,9 +15,8 @@ import StainBeforeAfter from "@/components/stain-removal/StainBeforeAfter";
 import StainFaq from "@/components/stain-removal/StainFaq";
 import StainFinalCta from "@/components/stain-removal/StainFinalCta";
 
-const title = `Professional Stain Removal | ${siteInfo.name}`;
 const description = "Professional stain removal for suitable carpets, rugs, sofas and upholstery, with targeted treatment based on the stain, material and previous cleaning attempts.";
-export const metadata: Metadata = { title, description, alternates: { canonical: "/services/stain-removal" } };
+export const metadata: Metadata = { title: "Transform Your Surfaces with Stain Removal Experts", description: "Discover how professional stain removal can restore your surfaces. Get started with a consultation now!", alternates: { canonical: "/services/stain-removal" } };
 const serviceSchema = { "@context": "https://schema.org", "@type": "Service", name: "Professional Stain Removal", description, url: `${SITE_URL}/services/stain-removal`, serviceType: "Stain Removal", provider: { "@id": BUSINESS_ID } };
 const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: stainFaqs.map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) };
 const breadcrumbs = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "Stain Removal", path: "/services/stain-removal" }]);

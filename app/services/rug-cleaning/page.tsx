@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { siteInfo } from "@/lib/data";
 import { SITE_URL, BUSINESS_ID, breadcrumbSchema } from "@/lib/seo";
 import { rugFaqs } from "@/components/rug-cleaning/rugFaqs";
 import RugHero from "@/components/rug-cleaning/RugHero";
@@ -16,13 +15,13 @@ import RugBeforeAfter from "@/components/rug-cleaning/RugBeforeAfter";
 import RugFaq from "@/components/rug-cleaning/RugFaq";
 import RugFinalCta from "@/components/rug-cleaning/RugFinalCta";
 
-const title = `Professional Rug Cleaning | ${siteInfo.name}`;
 const description =
   "Professional rug cleaning with an approach based on the rug's material and condition — deep rug cleaning, wool rug care, spot treatment and area rug cleaning.";
 
 export const metadata: Metadata = {
-  title,
-  description,
+  title: "Transform Your Space with Our Rug Cleaning Solutions",
+  description:
+    "Bring your rugs back to life with our professional cleaning. Schedule a service today and enjoy freshness!",
   alternates: {
     canonical: "/services/rug-cleaning",
   },

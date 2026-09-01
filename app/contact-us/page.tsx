@@ -9,8 +9,9 @@ import { SITE_URL, BUSINESS_ID, breadcrumbSchema } from "@/lib/seo";
 const description = `Get in touch with ${siteInfo.name} for a free quote on carpet, upholstery, rug, and sofa cleaning across the UK.`;
 
 export const metadata: Metadata = {
-  title: `Contact Us | ${siteInfo.name}`,
-  description,
+  title: "Get in Touch with Fresh Loom Cleaning Services",
+  description:
+    "Need a deep clean? Fresh Loom Carpet Cleaning offers expert solutions. Contact us for a quote now.",
   alternates: {
     canonical: "/contact-us",
   },

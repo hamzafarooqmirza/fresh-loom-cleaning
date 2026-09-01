@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { siteInfo } from "@/lib/data";
 import { SITE_URL, BUSINESS_ID, breadcrumbSchema } from "@/lib/seo";
 import { carpetFaqs } from "@/components/carpet-cleaning/carpetFaqs";
 import CarpetHero from "@/components/carpet-cleaning/CarpetHero";
@@ -16,13 +15,13 @@ import CarpetBeforeAfter from "@/components/carpet-cleaning/CarpetBeforeAfter";
 import CarpetFaq from "@/components/carpet-cleaning/CarpetFaq";
 import CarpetFinalCta from "@/components/carpet-cleaning/CarpetFinalCta";
 
-const title = `Professional Carpet Cleaning | ${siteInfo.name}`;
 const description =
   "Professional carpet cleaning that goes beyond the surface — deep cleaning, carpet steam cleaning, stain treatment and wool carpet care, with the method chosen to suit your carpet.";
 
 export const metadata: Metadata = {
-  title,
-  description,
+  title: "Transform Your Home with Carpet Cleaning Experts",
+  description:
+    "Need a deep clean? Our professional carpet cleaning ensures a fresh look and feel. Learn more now!",
   alternates: {
     canonical: "/services/carpet-cleaning",
   },

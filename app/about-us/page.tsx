@@ -11,8 +11,9 @@ import { SITE_URL, BUSINESS_ID, breadcrumbSchema } from "@/lib/seo";
 const description = `${siteInfo.name} provides professional cleaning services designed to restore cleanliness, freshness, and comfort to homes and businesses across the UK.`;
 
 export const metadata: Metadata = {
-  title: `About Us | ${siteInfo.name}`,
-  description,
+  title: "Transform Your Home with Fresh Loom Carpet Cleaning",
+  description:
+    "Looking for carpet cleaning? Choose Fresh Loom for a professional touch, ensuring carpets look brand new!",
   alternates: {
     canonical: "/about-us",
   },
