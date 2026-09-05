@@ -4,17 +4,20 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Phone, Tag } from "lucide-react";
 import { siteInfo, stats } from "@/lib/data";
+import AnimatedCounter from "./AnimatedCounter";
+
+const statColors = ["text-navy-dark", "text-accent", "text-navy-dark"];
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-cream">
-      <div className="container-page grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-14 lg:py-20">
+      <div className="container-page grid lg:grid-cols-2 gap-12 items-center py-16 lg:py-24">
         <div>
           <span className="eyebrow mb-4 animate-fade-up">
             <Tag size={16} /> Glasgow&apos;s Cleaning Specialists
           </span>
           <h1
-            className="text-4xl md:text-5xl font-bold text-navy-dark leading-tight mb-5 animate-fade-up"
+            className="text-4xl md:text-5xl font-bold text-navy-dark leading-tight mb-6 animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
             Professional Carpet Cleaning in Glasgow
@@ -23,55 +26,75 @@ export default function Hero() {
             className="text-slate-600 text-lg mb-8 max-w-xl animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
-            Professional carpet cleaning for homes across Glasgow, helping to remove built-up
-            dirt, everyday marks and stains while leaving carpets cleaner and refreshed.
+            {siteInfo.name} provides professional carpet cleaning in Glasgow, along with
+            upholstery, sofa and rug cleaning for homes and businesses across the city. We remove
+            everyday dirt, stains, odours and built-up grime, helping your carpets and
+            furnishings look and feel fresh again.
           </p>
-          <div className="flex flex-wrap items-center gap-4 mb-8 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+          <div className="flex flex-wrap gap-4 mb-12 animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <motion.a
               href="/contact-us"
               className="btn-navy"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
             >
-              Request a Quote <ArrowUpRight size={18} />
+              Get a Free Quote <ArrowUpRight size={18} />
             </motion.a>
-            <a
+            <motion.a
               href={siteInfo.phoneHref}
-              className="inline-flex items-center gap-2 font-heading font-semibold text-sm text-navy-dark hover:text-accent transition-colors"
+              className="btn-navy-outline"
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
             >
-              <span className="w-11 h-11 shrink-0 rounded-full border-2 border-navy/15 flex items-center justify-center">
-                <Phone size={16} />
-              </span>
-              Call {siteInfo.phone.replace("+44 ", "0")}
-            </a>
+              <Phone size={18} /> Call Us
+            </motion.a>
           </div>
 
-          <div
-            className="flex flex-wrap gap-x-8 gap-y-3 pt-6 border-t border-navy/10 max-w-md animate-fade-up"
-            style={{ animationDelay: "0.4s" }}
-          >
-            {stats.map((s) => (
+          <div className="flex gap-6 sm:gap-10 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+            {stats.map((s, i) => (
               <div key={s.label}>
-                <span className="font-heading font-bold text-navy-dark">{s.value}</span>{" "}
-                <span className="text-sm text-slate-500">{s.label}</span>
+                <div className={`text-2xl sm:text-3xl font-bold font-heading ${statColors[i % statColors.length]}`}>
+                  <AnimatedCounter value={s.value} />
+                </div>
+                <div className="text-xs sm:text-sm text-slate-500 mt-1">{s.label}</div>
               </div>
             ))}
           </div>
         </div>
 
         <div className="flex justify-center lg:justify-end">
-          <div className="relative z-0 w-full max-w-[440px] aspect-[4/3]">
-            <div className="hidden sm:block absolute -right-6 -bottom-6 w-40 h-40 rounded-full bg-accent -z-10" />
-            <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-xl">
+          <div className="relative z-0 w-[280px] sm:w-[340px] lg:w-[380px] aspect-[414/602]">
+            <motion.div
+              className="absolute left-1/2 top-[30%] -translate-x-1/2 -translate-y-1/2 w-[125%] h-[70%] rounded-full bg-accent/15 -z-10"
+              animate={{ scale: [1, 1.06, 1] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <motion.div
+              className="absolute left-1/2 top-[30%] -translate-x-1/2 -translate-y-1/2 w-[95%] h-[53%] rounded-full bg-accent -z-10"
+              animate={{ scale: [1, 1.04, 1] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
+            />
+            <Image
+              src="/images/hero-cleaner.png"
+              alt="Professional cleaner at work"
+              width={414}
+              height={602}
+              className="drop-shadow-2xl w-full h-full object-contain"
+              priority
+            />
+            <motion.div
+              className="hidden sm:block absolute -bottom-10 -right-6 w-[150px] h-[150px]"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            >
               <Image
-                src="/images/services/carpet-cleaning.jpg"
-                alt="Professional carpet cleaning technician vacuuming a carpet in a Glasgow home"
-                fill
-                priority
-                sizes="(min-width: 1024px) 45vw, 90vw"
-                className="object-cover"
+                src="/images/hero-tools.png"
+                alt="Cleaning tools"
+                width={284}
+                height={300}
+                className="w-full h-full object-contain drop-shadow-xl"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
