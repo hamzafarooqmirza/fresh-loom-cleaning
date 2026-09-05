@@ -42,7 +42,7 @@ export default function Hero() {
               <span className="w-11 h-11 shrink-0 rounded-full border-2 border-navy/15 flex items-center justify-center">
                 <Phone size={16} />
               </span>
-              Call 07778 879063
+              Call {siteInfo.phone.replace("+44 ", "0")}
             </a>
           </div>
 
