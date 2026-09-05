@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Tag } from "lucide-react";
+import { ArrowUpRight, Phone, Tag } from "lucide-react";
 import { siteInfo, stats } from "@/lib/data";
 import AnimatedCounter from "./AnimatedCounter";
 
@@ -41,12 +41,12 @@ export default function Hero() {
               Get a Free Quote <ArrowUpRight size={18} />
             </motion.a>
             <motion.a
-              href="/contact-us"
+              href={siteInfo.phoneHref}
               className="btn-navy-outline"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
             >
-              Book a Cleaning
+              <Phone size={18} /> Call Us
             </motion.a>
           </div>
 
