@@ -22,7 +22,7 @@ export default function FinalCta() {
         </h2>
         <p className="text-white/80 mb-10">
           Whether you need carpet cleaning, sofa cleaning, upholstery cleaning, rug cleaning or
-          help with a stubborn stain, Fresh Loom Cleaning is ready to help. Tell us what needs
+          help with a stubborn stain, {siteInfo.name} is ready to help. Tell us what needs
           cleaning and we&apos;ll help you choose the right service.
         </p>
         <div className="flex flex-wrap justify-center gap-4">

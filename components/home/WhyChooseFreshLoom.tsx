@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SprayCan, Layers3, Search, CheckCircle2 } from "lucide-react";
+import { siteInfo } from "@/lib/data";
 import Reveal from "../Reveal";
 
 const points = [
@@ -21,7 +23,7 @@ const points = [
   {
     icon: CheckCircle2,
     title: "Local Cleaning Service",
-    description: "Fresh Loom Cleaning provides professional cleaning services for customers looking for reliable carpet and upholstery cleaners in Glasgow.",
+    description: `${siteInfo.name} is based in Glasgow, providing reliable carpet and upholstery cleaners for homes and businesses across the city.`,
   },
 ];
 
@@ -34,7 +36,7 @@ export default function WhyChooseFreshLoom() {
           <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-xl">
             <Image
               src="/images/services/upholstery-cleaning.jpg"
-              alt="Fresh Loom Cleaning technician deep cleaning upholstery"
+              alt="Fresh Loom Carpet Cleaning technician deep cleaning upholstery"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
@@ -44,14 +46,18 @@ export default function WhyChooseFreshLoom() {
 
         <Reveal direction="right" delay={0.1}>
           <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-4">
-            Why Choose Fresh Loom Cleaning?
+            Why Choose Fresh Loom?
           </h2>
           <p className="text-slate-600 mb-10">
             Choosing a cleaning company is about more than making a carpet look clean for a few
             days. The right approach considers the material, the type of dirt or stain and the
-            condition of the item before cleaning begins. At Fresh Loom Cleaning, we focus on
+            condition of the item before cleaning begins. At {siteInfo.name}, we focus on
             providing a practical, careful service that leaves your carpets and furnishings
-            feeling cleaner and fresher.
+            feeling cleaner and fresher. Read more about our approach on our{" "}
+            <Link href="/about-us" className="text-accent-dark font-semibold hover:underline">
+              About Us
+            </Link>{" "}
+            page.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6">

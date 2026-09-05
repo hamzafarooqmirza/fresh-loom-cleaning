@@ -11,9 +11,9 @@ import BeforeAfterGallery from "@/components/home/BeforeAfterGallery";
 import GlasgowCoverage from "@/components/home/GlasgowCoverage";
 import HomeFaq from "@/components/home/HomeFaq";
 import FinalCta from "@/components/home/FinalCta";
-const title = "Expert Carpet Cleaning Services for a Fresh Home";
+const title = "Carpet Cleaning Glasgow | Fresh Loom Carpet Cleaning";
 const description =
-  "Experience fresh carpets in Glasgow with our top-rated cleaning service. Schedule your appointment today!";
+  "Professional carpet cleaning in Glasgow for carpets, rugs, sofas and upholstery. Contact Fresh Loom Carpet Cleaning today to request a quote.";
 
 export const metadata: Metadata = {
   title,

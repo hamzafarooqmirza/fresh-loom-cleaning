@@ -4,16 +4,17 @@ import { useState } from "react";
 import Script from "next/script";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { siteInfo } from "@/lib/data";
 import Reveal from "../Reveal";
 
 const faqs = [
   {
-    q: "What cleaning services does Fresh Loom Cleaning provide?",
+    q: `What cleaning services does ${siteInfo.name} provide?`,
     a: "We provide professional carpet, upholstery, sofa and rug cleaning, along with specialist stain removal and other cleaning services.",
   },
   {
     q: "Do you provide carpet cleaning in Glasgow?",
-    a: "Yes. Fresh Loom Cleaning provides professional carpet cleaning for customers across Glasgow and surrounding areas.",
+    a: `Yes. ${siteInfo.name} provides professional carpet cleaning for customers across Glasgow and surrounding areas.`,
   },
   {
     q: "Can you remove difficult carpet stains?",
