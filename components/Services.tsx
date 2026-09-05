@@ -18,7 +18,7 @@ export default function Services() {
               <SprayCan size={16} /> Our Services
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark">
-              The Services We Provide for Our Customers
+              Our Cleaning Services in Glasgow
             </h2>
           </div>
           <Link href="/services" className="btn-outline shrink-0">

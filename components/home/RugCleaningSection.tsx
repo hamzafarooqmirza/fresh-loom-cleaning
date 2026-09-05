@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Waves } from "lucide-react";
+import { siteInfo } from "@/lib/data";
 import Reveal from "../Reveal";
 
 const materials = ["Wool", "Silk", "Synthetic", "Hand-Woven"];
@@ -26,7 +27,7 @@ export default function RugCleaningSection() {
             <Waves size={16} /> Professional Rug Cleaning
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">
-            Professional Rug Cleaning
+            Rug Cleaning for Every Material
           </h2>
           <p className="text-slate-600 mb-4">
             Rugs can collect a surprising amount of dirt between their fibres, especially in busy
@@ -34,7 +35,7 @@ export default function RugCleaningSection() {
             professional clean.
           </p>
           <p className="text-slate-600 mb-6">
-            Fresh Loom Cleaning provides{" "}
+            {siteInfo.name} provides{" "}
             <Link href="/services/rug-cleaning" className="text-accent-dark font-semibold hover:underline">
               professional rug cleaning
             </Link>{" "}

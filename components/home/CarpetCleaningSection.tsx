@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, SprayCan } from "lucide-react";
+import { siteInfo } from "@/lib/data";
 import Reveal from "../Reveal";
 
 export default function CarpetCleaningSection() {
@@ -21,10 +22,10 @@ export default function CarpetCleaningSection() {
 
         <Reveal direction="right" delay={0.1}>
           <span className="eyebrow mb-4">
-            <SprayCan size={16} /> Professional Carpet Cleaning
+            <SprayCan size={16} /> Carpet Cleaning
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-6">
-            Professional Carpet Cleaning in Glasgow
+            Carpet Cleaning for Glasgow Homes &amp; Businesses
           </h2>
           <p className="text-slate-600 mb-4">
             Clean carpets can make a noticeable difference to how a room looks and feels. However,
@@ -32,7 +33,7 @@ export default function CarpetCleaningSection() {
             trapped deeper in carpet fibres.
           </p>
           <p className="text-slate-600 mb-4">
-            Fresh Loom Cleaning provides{" "}
+            {siteInfo.name} provides{" "}
             <Link href="/services/carpet-cleaning" className="text-accent-dark font-semibold hover:underline">
               professional carpet cleaning
             </Link>{" "}

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Tag } from "lucide-react";
-import { stats } from "@/lib/data";
+import { siteInfo, stats } from "@/lib/data";
 import AnimatedCounter from "./AnimatedCounter";
 
 const statColors = ["text-navy-dark", "text-accent", "text-navy-dark"];
@@ -20,15 +20,16 @@ export default function Hero() {
             className="text-4xl md:text-5xl font-bold text-navy-dark leading-tight mb-6 animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
-            Professional Carpet &amp; Upholstery Cleaning in Glasgow
+            Carpet Cleaning in Glasgow You Can Rely On
           </h1>
           <p
             className="text-slate-600 text-lg mb-8 max-w-xl animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
-            Give your carpets, sofas, rugs and upholstery a deeper clean with Fresh Loom Cleaning.
-            We provide professional cleaning services designed to remove everyday dirt, stains,
-            odours and built-up grime while helping your furnishings look and feel fresh again.
+            {siteInfo.name} provides professional carpet cleaning in Glasgow, along with
+            upholstery, sofa and rug cleaning for homes and businesses across the city. We remove
+            everyday dirt, stains, odours and built-up grime, helping your carpets and
+            furnishings look and feel fresh again.
           </p>
           <div className="flex flex-wrap gap-4 mb-12 animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <motion.a

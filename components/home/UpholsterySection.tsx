@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Sofa } from "lucide-react";
+import { siteInfo } from "@/lib/data";
 import Reveal from "../Reveal";
 
 export default function UpholsterySection() {
@@ -44,7 +45,7 @@ export default function UpholsterySection() {
             <Link href="/services/sofa-cleaning" className="text-accent-dark font-semibold hover:underline">
               sofa cleaning
             </Link>{" "}
-            to more stubborn marks, Fresh Loom Cleaning can help give your furniture a cleaner,
+            to more stubborn marks, {siteInfo.name} can help give your furniture a cleaner,
             fresher appearance.
           </p>
           <Link href="/services/upholstery-cleaning" className="btn-accent">

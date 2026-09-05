@@ -29,19 +29,40 @@ export default function GlasgowCoverage() {
             Carpet &amp; Upholstery Cleaning Across Glasgow
           </h2>
           <p className="text-slate-600 mb-4">
-            {siteInfo.name} provides professional carpet, upholstery, sofa and rug cleaning for
-            customers across Glasgow and surrounding areas.
+            {siteInfo.name} is a Glasgow-based carpet cleaning company providing professional
+            carpet cleaning services, along with upholstery, sofa and rug cleaning, for homes and
+            businesses across the city.
           </p>
           <p className="text-slate-600 mb-4">
             Whether you need a carpet refreshed after months of everyday use, a sofa cleaned after
             a spill or a rug given a deeper clean, our local cleaning service is here to help.
           </p>
           <p className="text-slate-600 mb-8">
-            We serve customers looking for professional carpet cleaners and upholstery cleaners
-            throughout Glasgow and surrounding areas.
+            As well as Glasgow, we&apos;re also able to travel to nearby towns and cities,
+            including{" "}
+            <Link href="/areas/edinburgh" className="text-accent-dark font-semibold hover:underline">
+              Edinburgh
+            </Link>
+            ,{" "}
+            <Link href="/areas/stirling" className="text-accent-dark font-semibold hover:underline">
+              Stirling
+            </Link>
+            ,{" "}
+            <Link href="/areas/perth" className="text-accent-dark font-semibold hover:underline">
+              Perth
+            </Link>
+            ,{" "}
+            <Link href="/areas/dundee" className="text-accent-dark font-semibold hover:underline">
+              Dundee
+            </Link>{" "}
+            and{" "}
+            <Link href="/areas/dunfermline" className="text-accent-dark font-semibold hover:underline">
+              Dunfermline
+            </Link>
+            , for professional carpet cleaners and upholstery cleaners on request.
           </p>
           <Link href="/contact-us" className="btn-accent">
-            Check Our Service Areas <ArrowUpRight size={18} />
+            Request a Quote <ArrowUpRight size={18} />
           </Link>
         </Reveal>
       </div>
