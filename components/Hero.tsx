@@ -20,7 +20,7 @@ export default function Hero() {
             className="text-4xl md:text-5xl font-bold text-navy-dark leading-tight mb-6 animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
-            Carpet Cleaning in Glasgow You Can Rely On
+            Professional Carpet Cleaning in Glasgow
           </h1>
           <p
             className="text-slate-600 text-lg mb-8 max-w-xl animate-fade-up"
