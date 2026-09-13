@@ -105,16 +105,16 @@ export const privacyPolicy: LegalContent = {
         { type: "h3", text: "Google Tag Manager" },
         {
           type: "p",
-          text: "We use Google Tag Manager to manage scripts and tags on our website, which may include analytics tools used to understand how visitors interact with our site. Depending on how it is configured, Google Tag Manager may place cookies on your device. This helps us see which pages are popular and how visitors reach our site, so we can improve it over time.",
+          text: "We use Google Tag Manager to manage scripts and tags on our website, which may include analytics tools used to understand how visitors interact with our site. This only loads if you consent to Analytics cookies via our cookie banner or Cookie Settings — it does not run beforehand.",
         },
         { type: "h3", text: "Google Maps" },
         {
           type: "p",
-          text: "We embed a Google Maps view on our website so you can see our location. When the map loads, Google may set its own cookies in line with its own privacy policy.",
+          text: "We embed a Google Maps view on our website so you can see our location. The map only loads if you consent to Functional cookies, or click \"Show Map\" directly on the page. When it loads, Google may set its own cookies in line with its own privacy policy.",
         },
         {
           type: "p",
-          text: "You can control or disable cookies through your browser settings at any time. For more information about how Google collects and uses data through these services, please see Google's own Privacy Policy at policies.google.com/privacy.",
+          text: "You can review or change your cookie choices at any time using the \"Cookie Settings\" link in the footer, or through your browser settings. For full detail on the cookies used on this site, see our Cookie Policy. For more on how Google collects and uses data through these services, see Google's own Privacy Policy at policies.google.com/privacy.",
         },
       ],
     },

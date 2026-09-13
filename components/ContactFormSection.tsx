@@ -1,6 +1,7 @@
 import { contactPage, siteInfo } from "@/lib/data";
 import Reveal from "./Reveal";
 import AppointmentForm from "./AppointmentForm";
+import ConsentGatedMap from "./cookies/ConsentGatedMap";
 
 export default function ContactFormSection() {
   return (
@@ -10,14 +11,9 @@ export default function ContactFormSection() {
           <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark mb-4">Get In Touch</h2>
           <p className="text-slate-600 max-w-md mb-8">{contactPage.intro}</p>
           <div className="rounded-2xl overflow-hidden shadow-xl">
-            <iframe
-              src={siteInfo.mapEmbedUrl}
-              width="600"
-              height="400"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+            <ConsentGatedMap
               title={`${siteInfo.name} location`}
-              className="w-full h-[300px] lg:h-[360px] border-0"
+              className="h-[300px] lg:h-[360px]"
             />
           </div>
         </Reveal>

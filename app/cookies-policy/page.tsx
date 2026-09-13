@@ -6,10 +6,10 @@ import { siteInfo } from "@/lib/data";
 import { breadcrumbSchema } from "@/lib/seo";
 
 const description =
-  "Read the Cookies Policy for Fresh Loom Carpet Cleaning to understand what cookies and similar technologies are used on this website.";
+  "Read the Cookie Policy for Fresh Loom Carpet Cleaning to understand what cookies and similar technologies are used on this website, and how to manage your preferences.";
 
 export const metadata: Metadata = {
-  title: `Cookies Policy | ${siteInfo.name}`,
+  title: `Cookie Policy | ${siteInfo.name}`,
   description,
   alternates: {
     canonical: "/cookies-policy",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 const breadcrumbs = breadcrumbSchema([
   { name: "Home", path: "/" },
-  { name: "Cookies Policy", path: "/cookies-policy" },
+  { name: "Cookie Policy", path: "/cookies-policy" },
 ]);
 
 export default function CookiesPolicyPage() {
