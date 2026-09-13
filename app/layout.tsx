@@ -3,11 +3,11 @@ import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import GTMLoader from "@/components/cookies/GTMLoader";
+import CookieConsentBanner from "@/components/cookies/CookieConsentBanner";
 import { siteInfo } from "@/lib/data";
 import { SITE_URL, BUSINESS_ID } from "@/lib/seo";
 import "./globals.css";
-
-const GTM_ID = "GTM-TNCWZXNX";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -67,26 +67,13 @@ export default function RootLayout({
       <Script id="local-business-schema" type="application/ld+json" strategy="beforeInteractive">
         {JSON.stringify(localBusinessSchema)}
       </Script>
-      <Script id="gtm" strategy="afterInteractive">
-        {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${GTM_ID}');`}
-      </Script>
       <body className="min-h-full flex flex-col font-body">
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
+        <GTMLoader />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
         <WhatsAppButton />
+        <CookieConsentBanner />
       </body>
     </html>
   );

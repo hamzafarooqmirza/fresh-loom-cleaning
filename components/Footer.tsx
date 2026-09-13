@@ -4,6 +4,7 @@ import { footerServiceLinks, navLinks, siteInfo } from "@/lib/data";
 import { FacebookIcon, InstagramIcon, LinkedInIcon, YouTubeIcon } from "./SocialIcons";
 import FooterContactBar from "./FooterContactBar";
 import NewsletterForm from "./NewsletterForm";
+import CookieSettingsButton from "./cookies/CookieSettingsButton";
 
 const socials = [
   { icon: FacebookIcon, label: "Facebook" },
@@ -96,8 +97,11 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/cookies-policy" className="hover:text-accent transition-colors">
-                Cookies Policy
+                Cookie Policy
               </Link>
+            </li>
+            <li>
+              <CookieSettingsButton />
             </li>
           </ul>
         </div>

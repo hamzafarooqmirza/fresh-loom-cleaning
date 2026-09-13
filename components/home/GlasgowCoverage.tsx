@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { siteInfo } from "@/lib/data";
 import Reveal from "../Reveal";
+import ConsentGatedMap from "../cookies/ConsentGatedMap";
 
 export default function GlasgowCoverage() {
   return (
@@ -9,14 +10,9 @@ export default function GlasgowCoverage() {
       <div className="container-page grid lg:grid-cols-2 gap-12 items-center">
         <Reveal direction="left">
           <div className="rounded-2xl overflow-hidden shadow-xl">
-            <iframe
-              src={siteInfo.mapEmbedUrl}
-              width="600"
-              height="400"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+            <ConsentGatedMap
               title={`${siteInfo.name} service area map`}
-              className="w-full h-[320px] lg:h-[380px] border-0"
+              className="h-[320px] lg:h-[380px]"
             />
           </div>
         </Reveal>

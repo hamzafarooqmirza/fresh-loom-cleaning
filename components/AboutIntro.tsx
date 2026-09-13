@@ -1,5 +1,6 @@
 import { aboutPage, siteInfo } from "@/lib/data";
 import Reveal from "./Reveal";
+import ConsentGatedMap from "./cookies/ConsentGatedMap";
 
 export default function AboutIntro() {
   return (
@@ -17,14 +18,9 @@ export default function AboutIntro() {
         </Reveal>
 
         <Reveal direction="right" delay={0.1} className="rounded-2xl overflow-hidden shadow-xl">
-          <iframe
-            src={siteInfo.mapEmbedUrl}
-            width="600"
-            height="400"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+          <ConsentGatedMap
             title={`${siteInfo.name} location`}
-            className="w-full h-[350px] lg:h-[420px] border-0"
+            className="h-[350px] lg:h-[420px]"
           />
         </Reveal>
       </div>
