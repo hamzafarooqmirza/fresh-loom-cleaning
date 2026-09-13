@@ -35,8 +35,8 @@ export default function WhyChooseFreshLoom() {
           <div className="hidden sm:block absolute -top-8 -left-8 w-32 h-32 rounded-full bg-accent/10 -z-0" />
           <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/professional-upholstery-cleaning-service.webp"
-              alt="Fresh Loom Carpet Cleaning technician providing a professional upholstery cleaning service"
+              src="/images/services/professional-upholstery-cleaning-livingroom.webp"
+              alt="Fresh Loom Carpet Cleaning technician deep cleaning a sofa in a living room"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
