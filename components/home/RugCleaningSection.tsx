@@ -13,8 +13,8 @@ export default function RugCleaningSection() {
         <Reveal direction="left">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/rug-cleaning.jpg"
-              alt="Professional rug cleaning on a patterned area rug"
+              src="/images/services/professional-rug-cleaning-service.webp"
+              alt="Professional rug cleaning service on a patterned area rug"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

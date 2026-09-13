@@ -11,8 +11,8 @@ export default function CarpetCleaningSection() {
         <Reveal direction="left">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/carpet-cleaning.jpg"
-              alt="Vacuuming a carpet as part of a professional deep clean"
+              src="/images/services/professional-carpet-cleaning-service.webp"
+              alt="Professional carpet cleaning service in progress on a home carpet"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
