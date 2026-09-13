@@ -12,8 +12,8 @@ export default function UpholsterySection() {
         <Reveal direction="left" delay={0.1} className="lg:order-2">
           <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/images/services/sofa-cleaning.jpg"
-              alt="Vacuuming a sofa as part of an upholstery cleaning service"
+              src="/images/services/professional-sofa-cleaning-service.webp"
+              alt="Professional sofa cleaning service being carried out on a fabric sofa"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
