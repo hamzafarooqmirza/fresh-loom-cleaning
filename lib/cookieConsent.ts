@@ -62,8 +62,23 @@ export function openCookieSettings() {
 // effect body.
 export function subscribeToConsentChanges(callback: () => void) {
   if (!isBrowser()) return () => {};
+
+  // The browser's "storage" event fires in *other* tabs/windows on the
+  // same origin (never the tab that made the change), which is how a
+  // consent decision made in one tab reaches an already-open tab. Since
+  // that other tab may already have GTM running or a map loaded based on
+  // the old preferences, and there's no way to undo those once active, a
+  // reload is the only way to guarantee it actually reflects the change.
+  function handleStorage(event: StorageEvent) {
+    if (event.key === STORAGE_KEY) window.location.reload();
+  }
+
   window.addEventListener(CONSENT_CHANGED_EVENT, callback);
-  return () => window.removeEventListener(CONSENT_CHANGED_EVENT, callback);
+  window.addEventListener("storage", handleStorage);
+  return () => {
+    window.removeEventListener(CONSENT_CHANGED_EVENT, callback);
+    window.removeEventListener("storage", handleStorage);
+  };
 }
 
 export function getAnalyticsAllowed(): boolean {
