@@ -8,8 +8,8 @@ export default function FinalCta() {
   return (
     <section className="relative overflow-hidden bg-navy-dark py-20 lg:py-28">
       <Image
-        src="/images/services/professional-upholstery-cleaning-service.webp"
-        alt="Professional upholstery cleaning service"
+        src="/images/services/professional-cta-sofa-cleaning-background.webp"
+        alt="Professional sofa cleaning technician using extraction equipment in a living room"
         fill
         sizes="100vw"
         className="object-cover"
